@@ -1,4 +1,4 @@
-@use '../../styles/text-formatter' as tf;
+@use '../../../styles/text-formatter' as tf;
 
 .input__text-hint {
   @include tf.text-formatter('inter', 14);

@@ -1,10 +1,14 @@
-import './input.scss';
-import './input--focus.scss';
-import './input__text-hint.scss';
-import './input__box.scss';
-import type {PropsOfInputs} from "./PropsOfInputs.ts";
+import './styles/input.scss';
+import './styles/input--with-icon.scss';
+import './styles/input--with-icon--left.scss';
+import './styles/input--with-icon--right.scss';
+import './styles/input--with-icon--on-both-sides.scss';
+import './styles/input--focus.scss';
+import './styles/input__text-hint.scss';
+import './styles/input__box.scss';
+import type {PropsOfInputs} from "./model/PropsOfInputs.ts";
 
-export const StringInput = ({placeholder, textHint}: PropsOfInputs) => {
+export const StringInput = ({placeholder, textHint, icon}: PropsOfInputs) => {
     return (
         <div className='input__box'>
             <input

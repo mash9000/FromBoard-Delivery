@@ -1,8 +1,8 @@
-import './input.scss';
-import './input--focus.scss';
-import './input__text-hint.scss';
-import './input__box.scss';
-import type {PropsOfInputs} from "./PropsOfInputs.ts";
+import './styles/input.scss';
+import './styles/input--focus.scss';
+import './styles/input__text-hint.scss';
+import './styles/input__box.scss';
+import type {PropsOfInputs} from "./model/PropsOfInputs.ts";
 
 export const TelephoneInput = ({placeholder, textHint}: PropsOfInputs) => {
     return (
