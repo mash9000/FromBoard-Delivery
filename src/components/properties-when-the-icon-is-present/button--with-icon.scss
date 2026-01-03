@@ -1,0 +1,8 @@
+.button--with-icon::before {
+  content: var(--icon-url);
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}

@@ -1,0 +1,6 @@
+@use 'sass:map';
+@use '../styles/colors';
+
+.button:hover {
+  background: map.get(colors.$colors, 'purple-400');
+}

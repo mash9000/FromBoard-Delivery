@@ -1,5 +1,7 @@
+import {Button} from "./components/Button.tsx";
+
 export const App = () => {
-  return (
-    <p>check</p>
-      )
+    return (
+        <Button value='привет' nameOfIcon={false}/>
+    );
 }

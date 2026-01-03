@@ -1,0 +1,24 @@
+@use 'sass:map';
+@use './colors';
+
+@font-face {
+  font-family: 'Formular Bold';
+  src: url(/fonts/Formular/Formular-Bold.woff2) format("woff2");
+  font-weight: 700;
+}
+
+@mixin text-formatter($component, $size) {
+  @if ($size <= 0) {
+    @error 'размер шрифта должен быть больше нуля';
+  }
+
+  @if ($component == 'button') {
+    font: {
+      family: 'Formular Bold';
+      size: #{$size}px;
+    }
+    color: map.get(colors.$colors, 'gray-50');
+  } @else {
+    @error 'неверно указан компонент "#{$component}"';
+  }
+}
