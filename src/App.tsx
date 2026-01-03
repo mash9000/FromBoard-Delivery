@@ -12,7 +12,8 @@ export const App = () => {
                 placeholder='Вес, кг'
                 minValue={10}
                 step={1}
-                pattern='[0-9]+'/>
+                pattern='[0-9]+'
+                textHint='бамболейо'/>
         </>
     );
 }
