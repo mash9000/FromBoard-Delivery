@@ -3,21 +3,22 @@ import './input--focus.scss';
 import './input__text-hint.scss';
 import './input__box.scss';
 
-type FullNameInputProps = {
+type NumberInputProps = {
     placeholder: string,
     textHint?: string
 }
 
-export const FullNameInput = ({placeholder, textHint}: FullNameInputProps) => {
+export const NumberInput = ({placeholder, textHint}: NumberInputProps) => {
     return (
         <div className='input__box'>
             <input
                 className='input input--focus'
-                type='text'
+                type='number'
                 placeholder={placeholder}
                 spellCheck={true}
                 required={true}
-                pattern={'^[a-z]{2,}$'}/>
+                min={0}
+                step={.1}/>
             {textHint && <p className='input__text-hint'>{textHint}</p>}
         </div>
     );

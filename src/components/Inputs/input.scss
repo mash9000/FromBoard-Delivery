@@ -15,4 +15,9 @@
   &::placeholder {
     color: map.get(colors.$colors, 'grey-400');
   }
+
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
