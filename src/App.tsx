@@ -1,5 +1,5 @@
 import {Button} from "./components/Button/Button.tsx";
-import {Input} from "./components/Input/Input.tsx";
+import {FullNameInput} from "./components/Inputs/FullNameInput.tsx";
 
 export const App = () => {
     return (
@@ -7,13 +7,9 @@ export const App = () => {
             <Button
                 value='привет'
                 nameOfIcon={false}/>
-            <Input
-                type='number'
-                placeholder='Вес, кг'
-                minValue={10}
-                step={1}
-                pattern='[0-9]+'
-                textHint='бамболейо'/>
+            <FullNameInput
+                placeholder='Имя'
+                textHint='хоть какая-то поммощь'/>
         </>
     );
 }

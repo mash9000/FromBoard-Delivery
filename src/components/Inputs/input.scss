@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '../../styles/colors';
+@use '../../styles/text-formatter' as tf;
+
+.input {
+  width: 258px;
+  height: 48px;
+  box-sizing: border-box;
+  padding: 12px;
+  outline: none;
+  border: 2px solid map.get(colors.$colors, 'grey-900');
+  border-radius: 4px;
+  @include tf.text-formatter('input', 16);
+
+  &::placeholder {
+    color: map.get(colors.$colors, 'grey-400');
+  }
+}

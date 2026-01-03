@@ -1,6 +1,6 @@
 @use '../../styles/text-formatter' as tf;
 
 .input__text-hint {
-  @include tf.text-formatter('input', 14);
+  @include tf.text-formatter('inter', 14);
   line-height: 20px;
 }
