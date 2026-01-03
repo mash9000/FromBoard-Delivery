@@ -2,7 +2,7 @@ import './button.scss';
 import './button--hover.scss';
 import './button--active.scss';
 import './button--disabled.scss';
-import './properties-when-the-icon-is-present/button--with-icon.scss';
+import './button--with-icon.scss';
 
 type ButtonProps = {
     value: string,
