@@ -7,6 +7,12 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: 'Formular Regular';
+  src: url(/fonts/Formular/Formular-Regular.woff2) format("woff2");
+  font-weight: 400;
+}
+
 @mixin text-formatter($component, $size) {
   @if ($size <= 0) {
     @error 'размер шрифта должен быть больше нуля';
@@ -18,6 +24,12 @@
       size: #{$size}px;
     }
     color: map.get(colors.$colors, 'gray-50');
+  } @else if () {
+    font: {
+      family: 'Formular Regular';
+      size: #{$size}px;
+    }
+    color: map.get(colors.$colors, 'gray-900');
   } @else {
     @error 'неверно указан компонент "#{$component}"';
   }
