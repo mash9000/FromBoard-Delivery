@@ -1,4 +1,5 @@
 import './input.scss';
+import './input--focus.scss';
 
 type InputProps = {
     type: 'text' | 'tel' | 'email' | 'number',
@@ -19,7 +20,7 @@ export const Input = ({
                       }: InputProps) => {
     return (
         <input
-            className='input'
+            className='input input--focus'
             type={type}
             autoComplete='off'
             placeholder={placeholder}

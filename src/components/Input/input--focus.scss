@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use '../../styles/colors';
+
+.input:focus {
+  border-color: map.get(colors.$colors, 'purple-500');
+
+  &::placeholder {
+    color: map.get(colors.$colors, 'purple-500');
+  }
+}
