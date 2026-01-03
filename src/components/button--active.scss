@@ -1,0 +1,6 @@
+@use 'sass:map';
+@use '../styles/colors';
+
+.button:active {
+  background: map.get(colors.$colors, 'purple-700');
+}
