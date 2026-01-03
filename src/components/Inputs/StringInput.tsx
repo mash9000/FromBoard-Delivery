@@ -2,13 +2,9 @@ import './input.scss';
 import './input--focus.scss';
 import './input__text-hint.scss';
 import './input__box.scss';
+import type {PropsOfInputs} from "./PropsOfInputs.ts";
 
-type StringInputProps = {
-    placeholder: string,
-    textHint?: string
-}
-
-export const StringInput = ({placeholder, textHint}: StringInputProps) => {
+export const StringInput = ({placeholder, textHint}: PropsOfInputs) => {
     return (
         <div className='input__box'>
             <input

@@ -15,7 +15,6 @@ export const EmailInput = ({placeholder, textHint}: EmailInputProps) => {
                 className='input input--focus'
                 type='email'
                 placeholder={placeholder}
-                spellCheck={true}
                 required={true}/>
             {textHint && <p className='input__text-hint'>{textHint}</p>}
         </div>
