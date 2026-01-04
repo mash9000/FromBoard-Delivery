@@ -1,8 +1,8 @@
-import './button.scss';
-import './button--hover.scss';
-import './button--active.scss';
-import './button--disabled.scss';
-import './button--with-icon.scss';
+import './styles/button.scss';
+import './styles/button--hover.scss';
+import './styles/button--active.scss';
+import './styles/button--disabled.scss';
+import './styles/button--with-icon.scss';
 
 type ButtonProps = {
     value: string,

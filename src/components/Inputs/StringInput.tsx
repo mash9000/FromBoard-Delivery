@@ -9,7 +9,7 @@ import type {CSSProperties} from "react";
 
 export const StringInput = ({placeholder, textHint, icon}: PropsOfInputs) => {
     const cssPropertiesObject = new IconControllerForInputs();
-    let cssProperties: CSSProperties = {} as CSSProperties;
+    let cssProperties: CSSProperties = {'padding': '12px'} as CSSProperties;
     if (icon)
         cssProperties = cssPropertiesObject.getCSSProperties(icon);
 

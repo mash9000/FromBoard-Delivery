@@ -3,12 +3,20 @@ import './styles/input--focus.scss';
 import './styles/input__text-hint.scss';
 import './styles/input__box.scss';
 import type {PropsOfInputs} from "./model/interfaces/PropsOfInputs.ts";
+import {IconControllerForInputs} from "./model/IconControllerForInputs.ts";
+import type {CSSProperties} from "react";
 
-export const NumberInput = ({placeholder, textHint}: PropsOfInputs) => {
+export const NumberInput = ({placeholder, textHint, icon}: PropsOfInputs) => {
+    const cssPropertiesObject = new IconControllerForInputs();
+    let cssProperties: CSSProperties = {'padding': '12px'} as CSSProperties;
+    if (icon)
+        cssProperties = cssPropertiesObject.getCSSProperties(icon);
+
     return (
         <div className='input__box'>
             <input
                 className='input input--focus'
+                style={cssProperties}
                 type='number'
                 placeholder={placeholder}
                 required={true}

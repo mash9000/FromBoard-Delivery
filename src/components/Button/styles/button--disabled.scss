@@ -1,5 +1,5 @@
 @use 'sass:map';
-@use '../../styles/colors';
+@use '../../../styles/colors';
 
 .button:disabled {
   background: map.get(colors.$colors, 'purple-200');
