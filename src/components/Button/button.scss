@@ -1,6 +1,6 @@
 @use 'sass:map';
-@use '../styles/colors';
-@use '../styles/text-formatter' as tf;
+@use '../../styles/colors';
+@use '../../styles/text-formatter' as tf;
 
 .button {
   outline: none;
