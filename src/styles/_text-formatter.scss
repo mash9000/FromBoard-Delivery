@@ -13,6 +13,12 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: 'Formular Light';
+  src: url(/fonts/Formular/Formular-Light.woff2) format("woff2");
+  font-weight: 300;
+}
+
 @mixin text-formatter($component, $size) {
   @if ($size <= 0) {
     @error 'размер шрифта должен быть больше нуля';
@@ -24,12 +30,26 @@
       size: #{$size}px;
     }
     color: map.get(colors.$colors, 'gray-50');
-  } @else if () {
+  } @else if ($component == 'input') {
     font: {
       family: 'Formular Regular';
       size: #{$size}px;
     }
     color: map.get(colors.$colors, 'gray-900');
+  } @else if ($component == 'review text') {
+    font: {
+      family: 'Formular Bold';
+      size: #{$size}px;
+    }
+    line-height: 32px;
+    color: map.get(colors.$colors, 'gray-900');
+  } @else if ($component == 'review author') {
+    font: {
+      family: 'Formular Light';
+      size: #{$size}px;
+    }
+    line-height: 32px;
+    color: map.get(colors.$colors, 'gray-500');
   } @else {
     @error 'неверно указан компонент "#{$component}"';
   }

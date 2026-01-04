@@ -1,0 +1,5 @@
+@use '../../styles/text-formatter' as tf;
+
+.review__text {
+  @include tf.text-formatter('review text', 24);
+}
