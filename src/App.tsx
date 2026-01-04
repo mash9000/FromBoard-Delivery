@@ -1,9 +1,7 @@
-import {Review} from "./components/Review/Review.tsx";
+import {Logo} from "./components/Logo/Logo.tsx";
 
 export const App = () => {
     return (
-        <Review
-            getParagraph={() => 'Я уже несколько лет заказываю дизайнерскую одежду из Франции через ваш сервис, и он никогда меня не подводил. Важно иметь надежную компанию, которая позаботится о вашем заказе и предоставит все необходимые документы для ввоза в Россию'}
-            getAuthor={() => 'Ольга'}/>
+        <Logo/>
     );
 }

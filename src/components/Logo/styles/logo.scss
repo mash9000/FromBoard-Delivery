@@ -1,0 +1,10 @@
+.logo {
+  width: 305px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

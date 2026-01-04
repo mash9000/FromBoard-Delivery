@@ -19,6 +19,12 @@
   font-weight: 300;
 }
 
+@font-face {
+  font-family: 'Formular Black';
+  src: url(/fonts/Formular/Formular-Black.woff2) format("woff2");
+  font-weight: 900;
+}
+
 @mixin text-formatter($component, $size) {
   @if ($size <= 0) {
     @error 'размер шрифта должен быть больше нуля';
@@ -50,6 +56,12 @@
     }
     line-height: 32px;
     color: map.get(colors.$colors, 'gray-500');
+  } @else if ($component == 'logo') {
+    font: {
+      family: 'Formular Black';
+      size: #{$size}px;
+    }
+    color: map.get(colors.$colors, 'gray-900');
   } @else {
     @error 'неверно указан компонент "#{$component}"';
   }
