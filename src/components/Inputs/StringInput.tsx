@@ -3,7 +3,7 @@ import './styles/input--focus.scss';
 import './styles/input__text-hint.scss';
 import './styles/input__box.scss';
 
-import type {PropsOfInputs} from "./model/PropsOfInputs.ts";
+import type {PropsOfInputs} from "./model/interfaces/PropsOfInputs.ts";
 import {IconControllerForInputs} from "./model/IconControllerForInputs.ts";
 import type {CSSProperties} from "react";
 

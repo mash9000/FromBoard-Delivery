@@ -1,6 +1,6 @@
-import type {IIconStatus} from "./IIconStatus.ts";
+import type {IIconStatus} from "./interfaces/IIconStatus.ts";
 import type {CSSProperties} from "react";
-import type {IIconControllerForInputs} from "./IIconControllerForInputs.ts";
+import type {IIconControllerForInputs} from "./interfaces/IIconControllerForInputs.ts";
 
 export class IconControllerForInputs implements IIconControllerForInputs {
     public getCSSProperties(iconProperties: IIconStatus): CSSProperties {

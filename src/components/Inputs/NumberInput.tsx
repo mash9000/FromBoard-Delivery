@@ -2,7 +2,7 @@ import './styles/input.scss';
 import './styles/input--focus.scss';
 import './styles/input__text-hint.scss';
 import './styles/input__box.scss';
-import type {PropsOfInputs} from "./model/PropsOfInputs.ts";
+import type {PropsOfInputs} from "./model/interfaces/PropsOfInputs.ts";
 
 export const NumberInput = ({placeholder, textHint}: PropsOfInputs) => {
     return (
