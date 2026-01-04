@@ -1,16 +1,21 @@
 import {StringInput} from "./components/Inputs/StringInput.tsx";
-import type {IInputIcons} from "./components/Inputs/model/IInputIcons.ts";
+import type {IIconStatus} from "./components/Inputs/model/IIconStatus.ts";
+import {PositionVariant} from "./components/Inputs/model/PositionVariant.ts";
 
 export const App = () => {
-    const icon: IInputIcons = {
-        leftIcon: {
-            inputedName: 'vite.svg'
+    const iconLeft: IIconStatus = {
+        position: PositionVariant.LEFT,
+        iconOnTheLeft: {
+            placeholder: 'vite-placeholder.svg',
+            focus: 'vite-focus.svg',
+            afterEnteringTheText: 'vite.svg'
         }
     }
+
     return (
         <StringInput
             placeholder='Имя'
             textHint='хоть какая-то поммощь'
-            icon={icon}/>
+            icon={iconLeft}/>
     );
 }

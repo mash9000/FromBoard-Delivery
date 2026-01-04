@@ -1,7 +1,7 @@
-import type {IInputIcons} from "./IInputIcons.ts";
+import type {IIconStatus} from "./IIconStatus.ts";
 
 export type PropsOfInputs = {
     placeholder: string,
     textHint?: string,
-    icon?: IInputIcons
+    icon?: IIconStatus
 }

@@ -1,5 +1,8 @@
+import type {PositionVariant} from "./PositionVariant.ts";
+import type {ITypesOfIcons} from "./ITypesOfIcons.ts";
+
 export interface IIconStatus {
-    placeholderName?: string,
-    focusName?: string,
-    inputedName: string
+    position: PositionVariant,
+    iconOnTheLeft?: ITypesOfIcons,
+    iconOnTheRight?: ITypesOfIcons
 }
