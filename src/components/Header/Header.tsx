@@ -56,7 +56,7 @@ export const Header = ({
                         </div>
                     </div>
                     <div className='header__hotline-telephone-number'>
-                        <p>{getHotlineTelephoneNumber().telephoneNumber}</p>
+                        <a href={`tel:${getHotlineTelephoneNumber().telephoneNumber}`}>{getHotlineTelephoneNumber().telephoneNumber}</a>
                         <h3>{getHotlineTelephoneNumber().description}</h3>
                     </div>
                 </div>
