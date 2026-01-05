@@ -36,6 +36,13 @@
       size: #{$size}px;
     }
     color: map.get(colors.$colors, 'gray-50');
+  } @else if ($component == 'link static') {
+    font: {
+      family: 'Formular Bold';
+      size: #{$size}px;
+    }
+    text-decoration: none;
+    color: map.get(colors.$colors, 'gray-900');
   } @else if ($component == 'input') {
     font: {
       family: 'Formular Regular';
