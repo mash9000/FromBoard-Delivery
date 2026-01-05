@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use '../../../styles/colors';
+
+.header__current-exchange-rate {
+  display: inline-block;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border-right: 1px solid map.get(colors.$colors, 'grey-900');
+
+  &:last-child {
+    padding-right: 0;
+    border-right: none;
+  }
+}

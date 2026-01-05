@@ -1,4 +1,11 @@
 import './styles/header.scss';
+import './styles/header__navbar.scss';
+import './styles/header__quick-info-box.scss';
+import './styles/header__box-of-current-information.scss';
+import './styles/header__hotline-telephone-number.scss';
+import './styles/header__exchange-rates-of-major-currencies.scss';
+import './styles/header__exchange-rates-box.scss';
+import './styles/header__current-exchange-rate.scss';
 import type {HeaderModel} from "./model/HeaderModel.ts";
 import type {LinkModel} from "../Link/model/LinkModel.ts";
 import {Link} from "../Link/Link.tsx";
