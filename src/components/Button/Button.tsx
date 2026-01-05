@@ -3,13 +3,9 @@ import './styles/button--hover.scss';
 import './styles/button--active.scss';
 import './styles/button--disabled.scss';
 import './styles/button--with-icon.scss';
+import type {ButtonModel} from "./model/ButtonModel.ts";
 
-type ButtonProps = {
-    value: string,
-    nameOfIcon: string | false
-}
-
-export const Button = ({value, nameOfIcon}: ButtonProps) => {
+export const Button = ({value, nameOfIcon}: ButtonModel) => {
     const pathToTheFolderWithIconsForButtons: string = '/images/buttons/';
     return (
         <button type='button'
