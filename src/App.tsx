@@ -36,25 +36,11 @@ export const App = () => {
         minimumOrderValue: 2
     }
 
-    const currencies = [
-        {
-            title: 'Американский доллар',
-            symbol: '$',
-            convertValue: 32,
-        },
-        {
-            title: 'Евро',
-            symbol: '€',
-            convertValue: 43,
-        },
-    ]
-
     return (
         <Header
             getLinks={() => links}
             getDataOfButton={() => btn}
             getPricingInformation={() => pricingInfo}
-            getInterestingCurrencies={() => currencies}
             getHotlineTelephoneNumber={() => hotline}/>
     );
 }
