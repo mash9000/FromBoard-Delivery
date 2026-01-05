@@ -2,16 +2,17 @@
 @use '../../../styles/colors';
 
 .header {
-  width: 100%;
+  width: 1536px;
   height: 192px;
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
+  display: grid;
   gap: 24px;
-  justify-content: center;
-
-  container-type: inline-size;
-
-  @media screen and (max-width: 1024px) {
-    height: 262px;
-  }
+  grid-template-areas: 'logo . exchange-rates hotline-telephone-nuber'
+                        'navbar navbar navbar navbar';
+  align-items: center;
+  grid-template-columns:
+    305px
+    1fr
+    370px
+    380px;
 }

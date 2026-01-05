@@ -1,8 +1,6 @@
-@use 'sass:map';
-@use '../../../styles/colors';
-
 .header__navbar {
-  width: 1536px;
+  width: 100%;
+  max-width: 1536px;
   margin: 0 auto;
   height: 44px;
   display: flex;
@@ -12,21 +10,6 @@
   & > button {
     margin-left: auto;
   }
-}
 
-@container (max-width: 1536px) {
-  .header__navbar {
-    max-width: 1024px;
-  }
-}
-
-$border-properties: 2px solid map.get(colors.$colors, 'purple-400');
-
-@container (max-width: 1024px) {
-  .header__navbar {
-    width: 768px !important;
-    height: 68px !important;
-    border-top: $border-properties;
-    border-bottom: $border-properties;
-  }
+  grid-area: navbar;
 }

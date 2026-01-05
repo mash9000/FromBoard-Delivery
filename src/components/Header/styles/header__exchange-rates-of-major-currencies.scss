@@ -1,10 +1,19 @@
 .header__exchange-rates-of-major-currencies {
   width: 370px;
-  height: inherit;
+  height: 72px;
   box-sizing: border-box;
   padding-right: 12px;
   display: flex;
   flex-direction: column;
-  align-items: end;
   justify-content: space-between;
+
+
+  grid-area: exchange-rates;
+  justify-self: end;
+  align-items: end;
+
+  @media screen and (max-width: 1024px) {
+    background: red;
+    grid-row: 3 / 4 !important;
+  }
 }

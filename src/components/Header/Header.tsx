@@ -1,7 +1,5 @@
 import './styles/header.scss';
 import './styles/header__navbar.scss';
-import './styles/header__quick-info-box.scss';
-import './styles/header__box-of-current-information.scss';
 import './styles/header__hotline-telephone-number.scss';
 import './styles/header__exchange-rates-of-major-currencies.scss';
 import './styles/header__exchange-rates-box.scss';
@@ -49,24 +47,20 @@ export const Header = ({
 
     return (
         <header className='header'>
-            <div className='header__quick-info-box'>
-                <Logo/>
-                <div className='header__box-of-current-information'>
-                    <div className='header__exchange-rates-of-major-currencies'>
-                        <p className='header__slogan'>{getPricingInformation().slogan}</p>
-                        <p className='header__minimum-order-value'>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
-                        <div className='header__exchange-rates-box'>
-                            {currencyExchangeRateQueryError !== '' && currencyExchangeRateQueryError}
-                            <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('USD')} = ${Math.round(usDollarExchangeRate)} ₽`}</p>
-                            <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('EUR')} = ${Math.round(euroExchangeRate)} ₽`}</p>
-                            <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('CNY')} = ${Math.round(yuanExchangeRate)} ₽`}</p>
-                        </div>
-                    </div>
-                    <div className='header__hotline-telephone-number'>
-                        <a href={`tel:${getHotlineTelephoneNumber().telephoneNumber}`}>{getHotlineTelephoneNumber().telephoneNumber}</a>
-                        <h3>{getHotlineTelephoneNumber().description}</h3>
-                    </div>
+            <Logo/>
+            <div className='header__exchange-rates-of-major-currencies'>
+                <p className='header__slogan'>{getPricingInformation().slogan}</p>
+                <p className='header__minimum-order-value'>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
+                <div className='header__exchange-rates-box'>
+                    {currencyExchangeRateQueryError !== '' && currencyExchangeRateQueryError}
+                    <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('USD')} = ${Math.round(usDollarExchangeRate)} ₽`}</p>
+                    <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('EUR')} = ${Math.round(euroExchangeRate)} ₽`}</p>
+                    <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('CNY')} = ${Math.round(yuanExchangeRate)} ₽`}</p>
                 </div>
+            </div>
+            <div className='header__hotline-telephone-number'>
+                <a href={`tel:${getHotlineTelephoneNumber().telephoneNumber}`}>{getHotlineTelephoneNumber().telephoneNumber}</a>
+                <h3>{getHotlineTelephoneNumber().description}</h3>
             </div>
             <nav className='header__navbar'>
                 {getLinks().map((link: LinkModel) =>
