@@ -7,3 +7,9 @@
   justify-content: space-between;
   @include tf.text-formatter('input', 16);
 }
+
+@container (max-width: 1024px) {
+  .header__box-of-current-information {
+    justify-content: end !important;
+  }
+}

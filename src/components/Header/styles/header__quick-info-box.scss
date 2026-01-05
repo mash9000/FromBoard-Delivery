@@ -1,8 +1,19 @@
 .header__quick-info-box {
-  width: 100%;
-  max-width: 1536px;
+  width: 1536px;
   margin: 0 auto;
   height: 76px;
   display: flex;
   justify-content: space-between;
+}
+
+@container (max-width: 1536px) {
+  .header__quick-info-box {
+    max-width: 1024px;
+  }
+}
+
+@container (max-width: 1024px) {
+  .header__quick-info-box {
+    max-width: 768px;
+  }
 }

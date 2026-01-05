@@ -23,3 +23,22 @@
     color: map.get(colors.$colors, 'gray-900');
   }
 }
+
+@container (max-width: 1024px) {
+  .header__hotline-telephone-number {
+    width: 229px !important;
+    border: none !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    gap: 4px !important;
+
+    & > a {
+      font-size: 24px !important;
+    }
+
+    & > h3 {
+      font-size: 16px !important;
+      line-height: 24px !important;
+    }
+  }
+}
