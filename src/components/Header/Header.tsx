@@ -62,8 +62,10 @@ export const Header = ({
                 </div>
             </div>
             <nav className='header__navbar'>
-                {getLinks().map((link: LinkModel) => <Link
-                    key={link.getTitle()} {...link} />)}
+                {getLinks().map((link: LinkModel) =>
+                    <Link
+                        key={link.getTitle()}
+                        {...link} />)}
                 <Button value={getDataOfButton().value}
                         nameOfIcon={getDataOfButton().nameOfIcon}/>
             </nav>
