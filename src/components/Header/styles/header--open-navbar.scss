@@ -1,18 +1,18 @@
 .header--open-navbar {
   height: 254px;
-  background-color: red;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   margin-top: 0;
   padding-top: 24px;
   transition: .2s;
-  //row-gap: 0;
-  //grid-template-columns:  233px   1fr                 200px                   56px;
-  //grid-template-rows:
-  //  74px
-  //  0
-  //  0;
-  //
-  //box-sizing: border-box;
-  //padding: 0 60px;
+
+  row-gap: 12px;
+  grid-template-areas:  'logo   .                    hotline-telephone-number burger-button'
+                          'navbar navbar               navbar                   navbar'
+                          'slogan minimum-order-value  exchange-rates-box       .';
+  grid-template-columns:  233px   1fr                 200px                   56px;
+  grid-template-rows:
+    74px
+    68px
+    48px;
 }
