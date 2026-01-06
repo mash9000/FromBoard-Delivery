@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use '../../../styles/colors';
+@use '../../../styles/text-formatter' as tf;
 
 .header__hotline-telephone-number {
   width: 380px;
@@ -14,10 +15,11 @@
 
   & > a {
     text-decoration: none;
+    @include tf.text-formatter('hotline telephone number');
   }
 
   & > h3 {
-    color: map.get(colors.$colors, 'gray-900');
+    @include tf.text-formatter('text for the hotline telephone number');
   }
 
   grid-area: hotline-telephone-number;

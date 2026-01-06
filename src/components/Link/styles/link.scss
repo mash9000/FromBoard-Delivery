@@ -1,3 +1,5 @@
-.link {
+@use '../../../styles/text-formatter' as tf;
 
+.link {
+  @include tf.text-formatter('navbar link default');
 }

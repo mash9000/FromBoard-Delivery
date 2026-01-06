@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use '../../../styles/colors';
+@use '../../../styles/text-formatter' as tf;
 
 .button {
   outline: none;
@@ -9,4 +10,5 @@
   height: 44px;
   border-radius: 4px;
   background: map.get(colors.$colors, 'purple-500');
+  @include tf.text-formatter('button text');
 }

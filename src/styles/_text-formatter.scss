@@ -2,9 +2,9 @@
 @use './colors';
 
 @font-face {
-  font-family: 'Formular Bold';
-  src: url(/fonts/Formular/Formular-Bold.woff2) format("woff2");
-  font-weight: 700;
+  font-family: 'Formular Light';
+  src: url(/fonts/Formular/Formular-Light.woff2) format("woff2");
+  font-weight: 300;
 }
 
 @font-face {
@@ -14,9 +14,9 @@
 }
 
 @font-face {
-  font-family: 'Formular Light';
-  src: url(/fonts/Formular/Formular-Light.woff2) format("woff2");
-  font-weight: 300;
+  font-family: 'Formular Bold';
+  src: url(/fonts/Formular/Formular-Bold.woff2) format("woff2");
+  font-weight: 700;
 }
 
 @font-face {
@@ -26,5 +26,50 @@
 }
 
 @mixin text-formatter($component) {
-
+  @if ($component == 'logo') {
+    font: {
+      family: 'Formular Black';
+      size: 24px;
+    }
+    line-height: 32px;
+    color: map.get(colors.$colors, 'gray-900');
+  } @else if ($component == 'terms') {
+    font: {
+      family: 'Formular Regular';
+      size: 16px;
+    }
+    line-height: 24px;
+    color: map.get(colors.$colors, 'gray-900');
+  } @else if ($component == 'hotline telephone number') {
+    font: {
+      family: 'Formular Black';
+      size: 36px;
+    }
+    line-height: 40px;
+    color: map.get(colors.$colors, 'gray-900');
+  } @else if ($component == 'text for the hotline telephone number') {
+    font: {
+      family: 'Formular Light';
+      size: 24px;
+    }
+    line-height: 32px;
+    color: map.get(colors.$colors, 'gray-900');
+  } @else if ($component == 'navbar link default') {
+    font: {
+      family: 'Formular Bold';
+      size: 16px;
+    }
+    line-height: 24px;
+    color: map.get(colors.$colors, 'gray-900');
+    text-decoration: none;
+  } @else if ($component == 'button text') {
+    font: {
+      family: 'Formular Bold';
+      size: 16px;
+    }
+    line-height: 24px;
+    color: map.get(colors.$colors, 'gray-50');
+  }  @else {
+    @error 'unknown component ("#{$component}")';
+  }
 }

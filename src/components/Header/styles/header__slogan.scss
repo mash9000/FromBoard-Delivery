@@ -1,6 +1,9 @@
+@use '../../../styles/text-formatter' as tf;
+
 .header__slogan {
   grid-area: slogan;
   justify-self: flex-end;
   align-self: center;
   padding-right: 24px;
+  @include tf.text-formatter('terms');
 }

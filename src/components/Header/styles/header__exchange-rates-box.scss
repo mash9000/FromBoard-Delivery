@@ -1,6 +1,9 @@
+@use '../../../styles/text-formatter' as tf;
+
 .header__exchange-rates-box {
   grid-area: exchange-rates-box;
   align-self: center;
   justify-self: flex-end;
   padding-right: 24px;
+  @include tf.text-formatter('terms');
 }
