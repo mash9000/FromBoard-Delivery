@@ -13,13 +13,43 @@
   padding-left: 12px;
   border-left: 1px solid map.get(colors.$colors, 'purple-400');
 
+  @media screen and (max-width: 1536px) {
+    width: 310px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    justify-content: center;
+    gap: 4px;
+    border: 0;
+  }
+
   & > a {
     text-decoration: none;
     @include tf.text-formatter('hotline telephone number');
+
+    @media screen and (max-width: 1536px) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
   & > h3 {
     @include tf.text-formatter('text for the hotline telephone number');
+
+    @media screen and (max-width: 1536px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   grid-area: hotline-telephone-number;
