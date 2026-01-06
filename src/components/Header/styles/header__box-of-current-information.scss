@@ -1,11 +1,8 @@
-@use '../../../styles/text-formatter' as tf;
-
 .header__box-of-current-information {
   width: 740px;
   height: 76px;
   display: flex;
   justify-content: space-between;
-  @include tf.text-formatter('input', 16);
 }
 
 @container (max-width: 1024px) {

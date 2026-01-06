@@ -1,6 +1,5 @@
 @use 'sass:map';
 @use '../../../styles/colors';
-@use '../../../styles/text-formatter' as tf;
 @use './hint-mixins';
 
 .input {
@@ -10,7 +9,6 @@
   outline: none;
   border: 2px solid map.get(colors.$colors, 'grey-900');
   border-radius: 4px;
-  @include tf.text-formatter('input', 16);
 
   background: var(--icon-located--placeholder);
   @include hint-mixins.background-properties;

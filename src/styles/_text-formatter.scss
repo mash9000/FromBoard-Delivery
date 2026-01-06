@@ -25,51 +25,6 @@
   font-weight: 900;
 }
 
-@mixin text-formatter($component, $size) {
-  @if ($size <= 0) {
-    @error 'размер шрифта должен быть больше нуля';
-  }
+@mixin text-formatter($component) {
 
-  @if ($component == 'button') {
-    font: {
-      family: 'Formular Bold';
-      size: #{$size}px;
-    }
-    color: map.get(colors.$colors, 'gray-50');
-  } @else if ($component == 'link static') {
-    font: {
-      family: 'Formular Bold';
-      size: #{$size}px;
-    }
-    text-decoration: none;
-    color: map.get(colors.$colors, 'gray-900');
-  } @else if ($component == 'input') {
-    font: {
-      family: 'Formular Regular';
-      size: #{$size}px;
-    }
-    color: map.get(colors.$colors, 'gray-900');
-  } @else if ($component == 'review text') {
-    font: {
-      family: 'Formular Bold';
-      size: #{$size}px;
-    }
-    line-height: 32px;
-    color: map.get(colors.$colors, 'gray-900');
-  } @else if ($component == 'review author') {
-    font: {
-      family: 'Formular Light';
-      size: #{$size}px;
-    }
-    line-height: 32px;
-    color: map.get(colors.$colors, 'gray-500');
-  } @else if ($component == 'logo') {
-    font: {
-      family: 'Formular Black';
-      size: #{$size}px;
-    }
-    color: map.get(colors.$colors, 'gray-900');
-  } @else {
-    @error 'неверно указан компонент "#{$component}"';
-  }
 }

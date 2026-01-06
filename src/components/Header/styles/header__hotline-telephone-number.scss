@@ -1,6 +1,5 @@
 @use 'sass:map';
 @use '../../../styles/colors';
-@use '../../../styles/text-formatter' as tf;
 
 .header__hotline-telephone-number {
   width: 380px;
@@ -14,12 +13,10 @@
   border-left: 1px solid map.get(colors.$colors, 'purple-400');
 
   & > a {
-    @include tf.text-formatter('logo', 36);
     text-decoration: none;
   }
 
   & > h3 {
-    @include tf.text-formatter('review author', 24);
     color: map.get(colors.$colors, 'gray-900');
   }
 
