@@ -52,7 +52,8 @@ export const Header = ({
     }, []);
 
     return (
-        <header className={`header ${isNavbarOpen ? 'header--open-navbar' : ''}`}>
+        <header
+            className={`header ${isNavbarOpen ? 'header--open-navbar' : ''}`}>
             <Logo/>
             <p className='header__slogan'>{getPricingInformation().slogan}</p>
             <p className='header__minimum-order-value'>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
@@ -66,7 +67,8 @@ export const Header = ({
                 <a href={`tel:${getHotlineTelephoneNumber().telephoneNumber}`}>{getHotlineTelephoneNumber().telephoneNumber}</a>
                 <h3>{getHotlineTelephoneNumber().description}</h3>
             </div>
-            <BurgerButton toggleNavbar={toggleNavbar} />
+            <BurgerButton toggleNavbar={toggleNavbar}
+                          isNavbarOpen={isNavbarOpen}/>
             <nav className='header__navbar'>
                 {getLinks().map((link: LinkModel) =>
                     <Link

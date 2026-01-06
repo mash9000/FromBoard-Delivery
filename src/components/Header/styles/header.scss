@@ -18,6 +18,8 @@
     24px
     68px;
 
+  transition: .2s;
+
   @media screen and (max-width: 1536px) {
     width: 1024px;
     grid-template-columns:  305px   1fr                 310px;
