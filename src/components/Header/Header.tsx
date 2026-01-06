@@ -5,6 +5,8 @@ import './styles/header__exchange-rates-box.scss';
 import './styles/header__current-exchange-rate.scss';
 import './styles/header__slogan.scss';
 import './styles/header__minimum-order-value.scss';
+import './styles/header--open-navbar.scss';
+
 import type {HeaderModel} from "./model/HeaderModel.ts";
 import type {LinkModel} from "../Link/model/LinkModel.ts";
 import {Link} from "../Link/Link.tsx";
@@ -19,7 +21,9 @@ export const Header = ({
                            getLinks,
                            getDataOfButton,
                            getPricingInformation,
-                           getHotlineTelephoneNumber
+                           getHotlineTelephoneNumber,
+                           isNavbarOpen,
+                           toggleNavbar,
                        }: HeaderModel) => {
 
     const [usDollarExchangeRate, setUSDollarExchangeRate] = useState<number>(0);
@@ -48,7 +52,7 @@ export const Header = ({
     }, []);
 
     return (
-        <header className='header'>
+        <header className={`header ${isNavbarOpen ? 'header--open-navbar' : ''}`}>
             <Logo/>
             <p className='header__slogan'>{getPricingInformation().slogan}</p>
             <p className='header__minimum-order-value'>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
@@ -62,7 +66,7 @@ export const Header = ({
                 <a href={`tel:${getHotlineTelephoneNumber().telephoneNumber}`}>{getHotlineTelephoneNumber().telephoneNumber}</a>
                 <h3>{getHotlineTelephoneNumber().description}</h3>
             </div>
-            <BurgerButton/>
+            <BurgerButton toggleNavbar={toggleNavbar} />
             <nav className='header__navbar'>
                 {getLinks().map((link: LinkModel) =>
                     <Link

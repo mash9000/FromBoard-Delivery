@@ -6,4 +6,6 @@ export type HeaderModel = {
     getDataOfButton(): ButtonModel,
     getPricingInformation(): {slogan: string, minimumOrderValue: number },
     getHotlineTelephoneNumber(): {telephoneNumber: string, description: string},
+    isNavbarOpen: boolean,
+    toggleNavbar: () => void
 }

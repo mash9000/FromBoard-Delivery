@@ -1,6 +1,7 @@
 import {Header} from "./components/Header/Header.tsx";
 import type {LinkModel} from "./components/Link/model/LinkModel.ts";
 import type {ButtonModel} from "./components/Button/model/ButtonModel.ts";
+import {useState} from "react";
 
 export const App = () => {
     const links: LinkModel[] = [
@@ -36,11 +37,19 @@ export const App = () => {
         minimumOrderValue: 2
     }
 
+    const [isNavbarOpen, setIsNavbarOpen] = useState<boolean>(false);
+
+    const toggleNavbar = (): void => {
+        setIsNavbarOpen(prev => !prev);
+    }
+
     return (
         <Header
             getLinks={() => links}
             getDataOfButton={() => btn}
             getPricingInformation={() => pricingInfo}
-            getHotlineTelephoneNumber={() => hotline}/>
+            getHotlineTelephoneNumber={() => hotline}
+            isNavbarOpen={isNavbarOpen}
+            toggleNavbar={toggleNavbar}/>
     );
 }
