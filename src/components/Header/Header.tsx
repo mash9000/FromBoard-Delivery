@@ -1,9 +1,10 @@
 import './styles/header.scss';
 import './styles/header__navbar.scss';
 import './styles/header__hotline-telephone-number.scss';
-import './styles/header__exchange-rates-of-major-currencies.scss';
 import './styles/header__exchange-rates-box.scss';
 import './styles/header__current-exchange-rate.scss';
+import './styles/header__slogan.scss';
+import './styles/header__minimum-order-value.scss';
 import type {HeaderModel} from "./model/HeaderModel.ts";
 import type {LinkModel} from "../Link/model/LinkModel.ts";
 import {Link} from "../Link/Link.tsx";
@@ -48,15 +49,13 @@ export const Header = ({
     return (
         <header className='header'>
             <Logo/>
-            <div className='header__exchange-rates-of-major-currencies'>
-                <p className='header__slogan'>{getPricingInformation().slogan}</p>
-                <p className='header__minimum-order-value'>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
-                <div className='header__exchange-rates-box'>
-                    {currencyExchangeRateQueryError !== '' && currencyExchangeRateQueryError}
-                    <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('USD')} = ${Math.round(usDollarExchangeRate)} ₽`}</p>
-                    <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('EUR')} = ${Math.round(euroExchangeRate)} ₽`}</p>
-                    <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('CNY')} = ${Math.round(yuanExchangeRate)} ₽`}</p>
-                </div>
+            <p className='header__slogan'>{getPricingInformation().slogan}</p>
+            <p className='header__minimum-order-value'>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
+            <div className='header__exchange-rates-box'>
+                {currencyExchangeRateQueryError !== '' && currencyExchangeRateQueryError}
+                <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('USD')} = ${Math.round(usDollarExchangeRate)} ₽`}</p>
+                <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('EUR')} = ${Math.round(euroExchangeRate)} ₽`}</p>
+                <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('CNY')} = ${Math.round(yuanExchangeRate)} ₽`}</p>
             </div>
             <div className='header__hotline-telephone-number'>
                 <a href={`tel:${getHotlineTelephoneNumber().telephoneNumber}`}>{getHotlineTelephoneNumber().telephoneNumber}</a>

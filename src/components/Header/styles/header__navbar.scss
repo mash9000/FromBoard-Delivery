@@ -1,7 +1,7 @@
 .header__navbar {
   width: 100%;
   max-width: 1536px;
-  margin: 0 auto;
+  margin: 24px auto 0;
   height: 44px;
   display: flex;
   align-items: center;
@@ -12,4 +12,12 @@
   }
 
   grid-area: navbar;
+  box-sizing: border-box;
+  padding-top: 24px;
+
+  @media screen and (max-width: 1024px) {
+    padding-top: 0;
+    align-self: center;
+    height: 68px;
+  }
 }

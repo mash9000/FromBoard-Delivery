@@ -4,15 +4,35 @@
 .header {
   width: 1536px;
   height: 192px;
-  margin: 0 auto;
+  margin: 24px auto 0;
+
   display: grid;
-  gap: 24px;
-  grid-template-areas: 'logo . exchange-rates hotline-telephone-nuber'
-                        'navbar navbar navbar navbar';
-  align-items: center;
-  grid-template-columns:
-    305px
-    1fr
-    370px
-    380px;
+  grid-template-areas:    'logo   slogan              hotline-telephone-number'
+                          'logo   minimum-order-value hotline-telephone-number'
+                          'logo   exchange-rates-box  hotline-telephone-number'
+                          'navbar navbar              navbar';
+  grid-template-columns:  305px   1fr                 380px;
+  grid-template-rows:
+    24px
+    24px
+    24px
+    68px;
+
+  @media screen and (max-width: 1536px) {
+    width: 1024px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 768px;
+
+    row-gap: 12px;
+    grid-template-areas:  'logo   .                    hotline-telephone-number'
+                          'navbar navbar               navbar'
+                          'slogan minimum-order-value  exchange-rates-box';
+    grid-template-columns:  305px   1fr                 229px;
+    grid-template-rows:
+    74px
+    68px
+    48px;
+  }
 }
