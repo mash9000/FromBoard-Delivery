@@ -1,0 +1,15 @@
+.burger-button {
+  width: 24px;
+  height: 16px;
+  flex-direction: column;
+  justify-content: space-between;
+
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    grid-area: burger-button;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+  }
+}

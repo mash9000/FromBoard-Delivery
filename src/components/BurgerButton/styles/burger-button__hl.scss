@@ -1,0 +1,9 @@
+@use 'sass:map';
+@use '../../../styles/colors';
+
+.burger-button__hl {
+  width: inherit;
+  height: 4px;
+  border-radius: 2px;
+  background-color: map.get(colors.$colors, 'purple-400');
+}

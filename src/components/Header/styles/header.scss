@@ -7,11 +7,11 @@
   margin: 24px auto 0;
 
   display: grid;
-  grid-template-areas:    'logo   slogan              hotline-telephone-number'
-                          'logo   minimum-order-value hotline-telephone-number'
-                          'logo   exchange-rates-box  hotline-telephone-number'
-                          'navbar navbar              navbar';
-  grid-template-columns:  305px   1fr                 380px;
+  grid-template-areas:    'logo   slogan              hotline-telephone-number  burger-button'
+                          'logo   minimum-order-value hotline-telephone-number  burger-button'
+                          'logo   exchange-rates-box  hotline-telephone-number  burger-button'
+                          'navbar navbar              navbar                    navbar';
+  grid-template-columns:  305px   1fr                 380px                     0;
   grid-template-rows:
     24px
     24px
@@ -24,16 +24,30 @@
   }
 
   @media screen and (max-width: 1024px) {
+    height: 262px;
     width: 768px;
 
     row-gap: 12px;
-    grid-template-areas:  'logo   .                    hotline-telephone-number'
-                          'navbar navbar               navbar'
-                          'slogan minimum-order-value  exchange-rates-box';
-    grid-template-columns:  233px   1fr                 260px;
+    grid-template-areas:  'logo   .                    hotline-telephone-number burger-button'
+                          'navbar navbar               navbar                   navbar'
+                          'slogan minimum-order-value  exchange-rates-box       .';
+    grid-template-columns:  233px   1fr                 260px                   0;
     grid-template-rows:
     74px
     68px
     48px;
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 90px;
+    row-gap: 0;
+    grid-template-columns:  233px   1fr                 200px                   56px;
+    grid-template-rows:
+    74px
+    0
+    0;
+
+    box-sizing: border-box;
+    padding: 0 60px;
   }
 }

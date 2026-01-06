@@ -13,6 +13,7 @@ import {Logo} from "../Logo/Logo.tsx";
 import {useEffect, useState} from "react";
 import {fetchExchangeRate} from "./model/CurrencyAPI.ts";
 import {CurrencyCodesAndSymbols} from "./model/CurrencyCodesAndSymbols.ts";
+import {BurgerButton} from "../BurgerButton/BurgerButton.tsx";
 
 export const Header = ({
                            getLinks,
@@ -61,6 +62,7 @@ export const Header = ({
                 <a href={`tel:${getHotlineTelephoneNumber().telephoneNumber}`}>{getHotlineTelephoneNumber().telephoneNumber}</a>
                 <h3>{getHotlineTelephoneNumber().description}</h3>
             </div>
+            <BurgerButton/>
             <nav className='header__navbar'>
                 {getLinks().map((link: LinkModel) =>
                     <Link

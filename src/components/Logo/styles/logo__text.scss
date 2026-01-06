@@ -2,4 +2,9 @@
 
 .logo__text {
   @include tf.text-formatter('logo');
+
+  @media screen and (max-width: 758px) {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
