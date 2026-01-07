@@ -1,7 +1,7 @@
-import './review.scss';
-import './review__text.scss';
-import './review__author.scss';
-import type {ReviewModel} from "./ReviewModel.ts";
+import './review/review.scss';
+import './review/__text/review__text.scss';
+import './review/__author/review__author.scss';
+import type {ReviewModel} from "./model/ReviewModel.ts";
 
 export const Review = ({getParagraph, getAuthor}: ReviewModel) => {
     return (
