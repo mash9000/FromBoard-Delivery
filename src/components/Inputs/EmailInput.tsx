@@ -1,7 +1,7 @@
-import './styles/input.scss';
-import './styles/input--focus.scss';
-import './styles/input__text-hint.scss';
-import './styles/input__box.scss';
+import './input/input.scss';
+import './input/_focus/input--focus.scss';
+import './input/__text-hint/input__text-hint.scss';
+import './input/__box/input__box.scss';
 import {IconControllerForInputs} from "./model/IconControllerForInputs.ts";
 import type {CSSProperties} from "react";
 import type {PropsOfInputs} from "./model/interfaces/PropsOfInputs.ts";
