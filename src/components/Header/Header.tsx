@@ -1,9 +1,11 @@
 import './styles/header.scss';
 import './styles/header__navbar.scss';
+import './styles/header__navbar--open-navbar.scss';
 import './styles/header__hotline-telephone-number.scss';
 import './styles/header__exchange-rates-box.scss';
 import './styles/header__current-exchange-rate.scss';
 import './styles/header__slogan.scss';
+import './styles/header__slogan--open-navbar.scss';
 import './styles/header__minimum-order-value.scss';
 import './styles/header--open-navbar.scss';
 
@@ -55,7 +57,7 @@ export const Header = ({
         <header
             className={`header ${isNavbarOpen ? 'header--open-navbar' : ''}`}>
             <Logo/>
-            <p className='header__slogan'>{getPricingInformation().slogan}</p>
+            <p className={`header__slogan ${isNavbarOpen ? 'header__slogan--open-navbar' : ''}`}>{getPricingInformation().slogan}</p>
             <p className='header__minimum-order-value'>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
             <div className='header__exchange-rates-box'>
                 {currencyExchangeRateQueryError !== '' && currencyExchangeRateQueryError}
@@ -69,7 +71,8 @@ export const Header = ({
             </div>
             <BurgerButton toggleNavbar={toggleNavbar}
                           isNavbarOpen={isNavbarOpen}/>
-            <nav className='header__navbar'>
+            <nav
+                className={`header__navbar ${isNavbarOpen ? 'header__navbar--open-navbar' : ''}`}>
                 {getLinks().map((link: LinkModel) =>
                     <Link
                         key={link.getTitle()}

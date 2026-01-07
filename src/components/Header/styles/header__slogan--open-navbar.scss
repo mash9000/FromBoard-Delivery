@@ -1,0 +1,13 @@
+@use '../../../styles/text-formatter' as tf;
+
+.header__slogan--open-navbar {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 14px;
+  line-height: 20px;
+  width: 233px;
+  text-align: center;
+  justify-self: center;
+}
