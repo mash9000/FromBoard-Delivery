@@ -7,6 +7,7 @@ import './styles/header__current-exchange-rate.scss';
 import './styles/header__slogan.scss';
 import './styles/header__slogan--open-navbar.scss';
 import './styles/header__minimum-order-value.scss';
+import './styles/header__minimum-order-value--open-navbar.scss';
 import './styles/header--open-navbar.scss';
 
 import type {HeaderModel} from "./model/HeaderModel.ts";
@@ -58,7 +59,7 @@ export const Header = ({
             className={`header ${isNavbarOpen ? 'header--open-navbar' : ''}`}>
             <Logo/>
             <p className={`header__slogan ${isNavbarOpen ? 'header__slogan--open-navbar' : ''}`}>{getPricingInformation().slogan}</p>
-            <p className='header__minimum-order-value'>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
+            <p className={`header__minimum-order-value ${isNavbarOpen ? 'header__minimum-order-value--open-navbar' : ''}`}>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
             <div className='header__exchange-rates-box'>
                 {currencyExchangeRateQueryError !== '' && currencyExchangeRateQueryError}
                 <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('USD')} = ${Math.round(usDollarExchangeRate)} ₽`}</p>
