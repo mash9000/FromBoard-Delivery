@@ -1,6 +1,6 @@
-import './styles/logo.scss';
-import './styles/logo__img.scss';
-import './styles/logo__text.scss';
+import './logo/logo.scss';
+import './logo/__img/logo__img.scss';
+import './logo/__text/logo__text.scss';
 
 export const Logo = () => {
     return (

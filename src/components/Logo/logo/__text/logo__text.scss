@@ -1,4 +1,4 @@
-@use '../../../styles/text-formatter' as tf;
+@use '../../../../styles/text-formatter' as tf;
 
 .logo__text {
   @include tf.text-formatter('logo');
