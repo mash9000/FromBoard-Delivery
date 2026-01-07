@@ -1,0 +1,13 @@
+@use 'sass:map';
+@use '../../../styles/colors';
+
+.header__navbar--open-navbar {
+  display: block;
+  $border-properties: 2px solid map.get(colors.$colors, 'purple-400');
+  height: 68px;
+  padding-top: 0;
+  align-self: center;
+  border-top: $border-properties;
+  border-bottom: $border-properties;
+  margin-bottom: 12px;
+}

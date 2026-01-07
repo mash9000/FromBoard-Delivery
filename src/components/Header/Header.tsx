@@ -1,11 +1,14 @@
 import './styles/header.scss';
 import './styles/header__navbar.scss';
+import './styles/header__navbar--open-navbar.scss';
 import './styles/header__hotline-telephone-number.scss';
 import './styles/header__exchange-rates-box.scss';
+import './styles/header__exchange-rates-box--open-navbar.scss';
 import './styles/header__current-exchange-rate.scss';
 import './styles/header__slogan.scss';
 import './styles/header__slogan--open-navbar.scss';
 import './styles/header__minimum-order-value.scss';
+import './styles/header__minimum-order-value--open-navbar.scss';
 import './styles/header--open-navbar.scss';
 
 import type {HeaderModel} from "./model/HeaderModel.ts";
@@ -57,8 +60,9 @@ export const Header = ({
             className={`header ${isNavbarOpen ? 'header--open-navbar' : ''}`}>
             <Logo/>
             <p className={`header__slogan ${isNavbarOpen ? 'header__slogan--open-navbar' : ''}`}>{getPricingInformation().slogan}</p>
-            <p className='header__minimum-order-value'>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
-            <div className='header__exchange-rates-box'>
+            <p className={`header__minimum-order-value ${isNavbarOpen ? 'header__minimum-order-value--open-navbar' : ''}`}>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
+            <div
+                className={`header__exchange-rates-box ${isNavbarOpen ? 'header__exchange-rates-box--open-navbar' : ''}`}>
                 {currencyExchangeRateQueryError !== '' && currencyExchangeRateQueryError}
                 <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('USD')} = ${Math.round(usDollarExchangeRate)} ₽`}</p>
                 <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('EUR')} = ${Math.round(euroExchangeRate)} ₽`}</p>
@@ -70,7 +74,8 @@ export const Header = ({
             </div>
             <BurgerButton toggleNavbar={toggleNavbar}
                           isNavbarOpen={isNavbarOpen}/>
-            <nav className='header__navbar'>
+            <nav
+                className={`header__navbar ${isNavbarOpen ? 'header__navbar--open-navbar' : ''}`}>
                 {getLinks().map((link: LinkModel) =>
                     <Link
                         key={link.getTitle()}
