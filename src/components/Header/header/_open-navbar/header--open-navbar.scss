@@ -1,19 +1,18 @@
 .header--open-navbar {
   height: 254px;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
+  border-radius: 16px;
   margin-top: 0;
   padding-top: 24px;
 
   transition: .2s;
 
-  width: 768px;
+  //width: 768px;
 
   row-gap: 12px;
   grid-template-areas:  'logo   .                     hotline-telephone-number burger-button'
                           'navbar navbar               navbar                   navbar'
                           'slogan minimum-order-value  exchange-rates-box       .';
-  grid-template-columns:  200px   240px                200px                    46px;
+  grid-template-columns:  184px   224px                 184px                   46px;
   grid-template-rows:
     74px
     68px

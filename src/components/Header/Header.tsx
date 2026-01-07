@@ -10,6 +10,7 @@ import './header/__slogan/_open-navbar/header__slogan--open-navbar.scss';
 import './header/__minimum-order-value/header__minimum-order-value.scss';
 import './header/__minimum-order-value/_open-navbar/header__minimum-order-value--open-navbar.scss';
 import './header/_open-navbar/header--open-navbar.scss';
+import '../../styles/underlay/underlay.scss';
 
 import type {HeaderModel} from "./model/HeaderModel.ts";
 import type {LinkModel} from "../Link/model/LinkModel.ts";
@@ -85,7 +86,7 @@ export const Header = ({
                             nameOfIcon={getDataOfButton().nameOfIcon}/>
                 </nav>
             </header>
-            <div className='подложка'></div>
+            <div className={`${isNavbarOpen ? 'underlay' : ''}`}></div>
         </>
     )
 }

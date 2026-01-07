@@ -6,4 +6,5 @@
   height: 4px;
   border-radius: 2px;
   background-color: map.get(colors.$colors, 'purple-400');
+  transition: .2s;
 }

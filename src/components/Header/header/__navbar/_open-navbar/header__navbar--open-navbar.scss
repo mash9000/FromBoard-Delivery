@@ -11,7 +11,7 @@
   border-bottom: $border-properties;
   margin: 0;
   opacity: 1;
-  max-height: 68px;
   visibility: visible;
-  transition: opacity .2s, max-height .2s, visibility .2s;
+  max-height: 68px;
+  transition: opacity .2s, visibility .2s, max-height .2s, margin .2s, padding .2s;
 }

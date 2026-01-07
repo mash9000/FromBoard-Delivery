@@ -26,8 +26,8 @@
   }
 
   @media screen and (max-width: 1024px) {
-    height: 262px;
     width: 768px;
+    height: 262px;
 
     row-gap: 12px;
     grid-template-areas:  'logo     .                    hotline-telephone-number burger-button'
@@ -41,9 +41,10 @@
   }
 
   @media screen and (max-width: 768px) {
+    width: 640px;
     height: 90px;
     row-gap: 0;
-    grid-template-columns:  200px   240px                 200px                   46px;
+    grid-template-columns:  184px   224px                 184px                   46px;
     grid-template-rows:
     74px
     0
@@ -51,5 +52,6 @@
 
     box-sizing: border-box;
     padding: 0 60px;
+    margin: 24px 0 0;
   }
 }
