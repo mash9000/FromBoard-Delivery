@@ -1,9 +1,9 @@
-@use '../../../styles/text-formatter' as tf;
+@use '../../../../styles/text-formatter' as tf;
 
-.header__exchange-rates-box {
-  grid-area: exchange-rates-box;
-  align-self: center;
+.header__slogan {
+  grid-area: slogan;
   justify-self: flex-end;
+  align-self: center;
   padding-right: 24px;
   @include tf.text-formatter('terms');
 
@@ -15,7 +15,7 @@
     border: 0;
     font-size: 14px;
     line-height: 20px;
-    width: 260px;
+    width: 233px;
     text-align: center;
   }
 

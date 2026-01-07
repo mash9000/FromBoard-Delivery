@@ -1,15 +1,15 @@
-import './styles/header.scss';
-import './styles/header__navbar.scss';
-import './styles/header__navbar--open-navbar.scss';
-import './styles/header__hotline-telephone-number.scss';
-import './styles/header__exchange-rates-box.scss';
-import './styles/header__exchange-rates-box--open-navbar.scss';
-import './styles/header__current-exchange-rate.scss';
-import './styles/header__slogan.scss';
-import './styles/header__slogan--open-navbar.scss';
-import './styles/header__minimum-order-value.scss';
-import './styles/header__minimum-order-value--open-navbar.scss';
-import './styles/header--open-navbar.scss';
+import './header/header.scss';
+import './header/__navbar/header__navbar.scss';
+import './header/__navbar/_open-navbar/header__navbar--open-navbar.scss';
+import './header/__hotline-telephone-number/header__hotline-telephone-number.scss';
+import './header/__exchange-rates-box/header__exchange-rates-box.scss';
+import './header/__exchange-rates-box/_open-navbar/header__exchange-rates-box--open-navbar.scss';
+import './header/__current-exchange-rate/header__current-exchange-rate.scss';
+import './header/__slogan/header__slogan.scss';
+import './header/__slogan/_open-navbar/header__slogan--open-navbar.scss';
+import './header/__minimum-order-value/header__minimum-order-value.scss';
+import './header/__minimum-order-value/_open-navbar/header__minimum-order-value--open-navbar.scss';
+import './header/_open-navbar/header--open-navbar.scss';
 
 import type {HeaderModel} from "./model/HeaderModel.ts";
 import type {LinkModel} from "../Link/model/LinkModel.ts";

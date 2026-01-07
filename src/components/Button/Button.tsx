@@ -1,8 +1,8 @@
-import './styles/button.scss';
-import './styles/button--hover.scss';
-import './styles/button--active.scss';
-import './styles/button--disabled.scss';
-import './styles/button--with-icon.scss';
+import './button/button.scss';
+import './button/_hover/button--hover.scss';
+import './button/_active/button--active.scss';
+import './button/_disabled/button--disabled.scss';
+import './button/_with-icon/button--with-icon.scss';
 import type {ButtonModel} from "./model/ButtonModel.ts";
 
 export const Button = ({value, nameOfIcon}: ButtonModel) => {

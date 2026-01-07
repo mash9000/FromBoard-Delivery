@@ -1,6 +1,6 @@
-import './styles/burger-button.scss';
-import './styles/burger-button--cross.scss';
-import './styles/burger-button__hl.scss';
+import './burger-button/burger-button.scss';
+import './burger-button/_cross/burger-button--cross.scss';
+import './burger-button/__hl/burger-button__hl.scss';
 
 type BurgerButtonProps = {
     toggleNavbar: () => void,

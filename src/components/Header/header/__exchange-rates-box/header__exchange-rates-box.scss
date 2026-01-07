@@ -1,7 +1,7 @@
-@use '../../../styles/text-formatter' as tf;
+@use '../../../../styles/text-formatter' as tf;
 
-.header__minimum-order-value{
-  grid-area: minimum-order-value;
+.header__exchange-rates-box {
+  grid-area: exchange-rates-box;
   align-self: center;
   justify-self: flex-end;
   padding-right: 24px;
@@ -15,7 +15,7 @@
     border: 0;
     font-size: 14px;
     line-height: 20px;
-    width: 233px;
+    width: 260px;
     text-align: center;
   }
 
