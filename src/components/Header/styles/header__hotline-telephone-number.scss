@@ -13,6 +13,8 @@
   padding-left: 12px;
   border-left: 1px solid map.get(colors.$colors, 'purple-400');
 
+  transition: .2s;
+
   @media screen and (max-width: 1536px) {
     width: 310px;
   }

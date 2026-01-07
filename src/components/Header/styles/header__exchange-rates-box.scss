@@ -7,6 +7,8 @@
   padding-right: 24px;
   @include tf.text-formatter('terms');
 
+  transition: .2s;
+
   @media screen and (max-width: 1024px) {
     padding: 0;
     margin: 0;
