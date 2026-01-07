@@ -7,7 +7,6 @@ export const Link = ({getHref, getTitle}: LinkModel) => {
     return (
         <a
             className='link link--hover link--active'
-            href={getHref().href}
-            target='_blank'>{getTitle()}</a>
+            href={getHref().href}>{getTitle()}</a>
     )
 }
