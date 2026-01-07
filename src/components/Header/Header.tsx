@@ -3,6 +3,7 @@ import './styles/header__navbar.scss';
 import './styles/header__navbar--open-navbar.scss';
 import './styles/header__hotline-telephone-number.scss';
 import './styles/header__exchange-rates-box.scss';
+import './styles/header__exchange-rates-box--open-navbar.scss';
 import './styles/header__current-exchange-rate.scss';
 import './styles/header__slogan.scss';
 import './styles/header__slogan--open-navbar.scss';
@@ -60,7 +61,7 @@ export const Header = ({
             <Logo/>
             <p className={`header__slogan ${isNavbarOpen ? 'header__slogan--open-navbar' : ''}`}>{getPricingInformation().slogan}</p>
             <p className={`header__minimum-order-value ${isNavbarOpen ? 'header__minimum-order-value--open-navbar' : ''}`}>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
-            <div className='header__exchange-rates-box'>
+            <div className={`header__exchange-rates-box ${isNavbarOpen ? 'header__exchange-rates-box--open-navbar' : ''}`}>
                 {currencyExchangeRateQueryError !== '' && currencyExchangeRateQueryError}
                 <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('USD')} = ${Math.round(usDollarExchangeRate)} ₽`}</p>
                 <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('EUR')} = ${Math.round(euroExchangeRate)} ₽`}</p>
