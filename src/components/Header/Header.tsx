@@ -56,32 +56,36 @@ export const Header = ({
     }, []);
 
     return (
-        <header
-            className={`header ${isNavbarOpen ? 'header--open-navbar' : ''}`}>
-            <Logo/>
-            <p className={`header__slogan ${isNavbarOpen ? 'header__slogan--open-navbar' : ''}`}>{getPricingInformation().slogan}</p>
-            <p className={`header__minimum-order-value ${isNavbarOpen ? 'header__minimum-order-value--open-navbar' : ''}`}>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
-            <div className={`header__exchange-rates-box ${isNavbarOpen ? 'header__exchange-rates-box--open-navbar' : ''}`}>
-                {currencyExchangeRateQueryError !== '' && currencyExchangeRateQueryError}
-                <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('USD')} = ${Math.round(usDollarExchangeRate)} ₽`}</p>
-                <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('EUR')} = ${Math.round(euroExchangeRate)} ₽`}</p>
-                <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('CNY')} = ${Math.round(yuanExchangeRate)} ₽`}</p>
-            </div>
-            <div className='header__hotline-telephone-number'>
-                <a href={`tel:${getHotlineTelephoneNumber().telephoneNumber}`}>{getHotlineTelephoneNumber().telephoneNumber}</a>
-                <h3>{getHotlineTelephoneNumber().description}</h3>
-            </div>
-            <BurgerButton toggleNavbar={toggleNavbar}
-                          isNavbarOpen={isNavbarOpen}/>
-            <nav
-                className={`header__navbar ${isNavbarOpen ? 'header__navbar--open-navbar' : ''}`}>
-                {getLinks().map((link: LinkModel) =>
-                    <Link
-                        key={link.getTitle()}
-                        {...link} />)}
-                <Button value={getDataOfButton().value}
-                        nameOfIcon={getDataOfButton().nameOfIcon}/>
-            </nav>
-        </header>
+        <>
+            <header
+                className={`header ${isNavbarOpen ? 'header--open-navbar' : ''}`}>
+                <Logo/>
+                <p className={`header__slogan ${isNavbarOpen ? 'header__slogan--open-navbar' : ''}`}>{getPricingInformation().slogan}</p>
+                <p className={`header__minimum-order-value ${isNavbarOpen ? 'header__minimum-order-value--open-navbar' : ''}`}>{`Стоимость от ${getPricingInformation().minimumOrderValue} ${CurrencyCodesAndSymbols.getTheEndingsOfWordsInRoubles(getPricingInformation().minimumOrderValue)} за заказ`}</p>
+                <div
+                    className={`header__exchange-rates-box ${isNavbarOpen ? 'header__exchange-rates-box--open-navbar' : ''}`}>
+                    {currencyExchangeRateQueryError !== '' && currencyExchangeRateQueryError}
+                    <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('USD')} = ${Math.round(usDollarExchangeRate)} ₽`}</p>
+                    <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('EUR')} = ${Math.round(euroExchangeRate)} ₽`}</p>
+                    <p className='header__current-exchange-rate'>{`1 ${CurrencyCodesAndSymbols.getTheCurrencySymbolByCode('CNY')} = ${Math.round(yuanExchangeRate)} ₽`}</p>
+                </div>
+                <div className='header__hotline-telephone-number'>
+                    <a href={`tel:${getHotlineTelephoneNumber().telephoneNumber}`}>{getHotlineTelephoneNumber().telephoneNumber}</a>
+                    <h3>{getHotlineTelephoneNumber().description}</h3>
+                </div>
+                <BurgerButton toggleNavbar={toggleNavbar}
+                              isNavbarOpen={isNavbarOpen}/>
+                <nav
+                    className={`header__navbar ${isNavbarOpen ? 'header__navbar--open-navbar' : ''}`}>
+                    {getLinks().map((link: LinkModel) =>
+                        <Link
+                            key={link.getTitle()}
+                            {...link} />)}
+                    <Button value={getDataOfButton().value}
+                            nameOfIcon={getDataOfButton().nameOfIcon}/>
+                </nav>
+            </header>
+            <div className='подложка'></div>
+        </>
     )
 }
