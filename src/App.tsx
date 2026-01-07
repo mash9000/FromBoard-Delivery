@@ -2,6 +2,12 @@ import {Header} from "./components/Header/Header.tsx";
 import type {LinkModel} from "./components/Link/model/LinkModel.ts";
 import type {ButtonModel} from "./components/Button/model/ButtonModel.ts";
 import {useState} from "react";
+import {
+    DeliveryCalculator
+} from "./components/DeliveryCalculator/DeliveryCalculator.tsx";
+import type {
+    IDeliveryCalculatorProps
+} from "./components/DeliveryCalculator/model/IDeliveryCalculatorProps.ts";
 
 export const App = () => {
     const links: LinkModel[] = [
@@ -43,13 +49,38 @@ export const App = () => {
         setIsNavbarOpen(prev => !prev);
     }
 
+    const deliveryCalculator: IDeliveryCalculatorProps = {
+        articleData: {
+            getHeading: () => 'Без проблемная доставка купленных вещей из США, Европы и Азии в Россию',
+            getDescription: () => 'Сэкономьте на покупках и наслаждайтесь мировыми брендами — наш сервис позволяет вам легко и удобно заказывать товары со всего мира и получать их в России',
+            getImageDescription: () => 'изображение оформления доставки'
+        },
+        formData: {
+            getHeading: () => 'Калькулятор доставки',
+            getDescription: () => 'Посчитайте, сколько будет стоить перевозка покупки из зарубежа',
+            placeholders: ['Имя',
+                'Почта',
+                'Телефон',
+                'Общая площадь, м2',
+                'Вес, кг',
+                'Страна покупки',
+                'Город покупки',
+                'Область доставки',
+                'Город доставки'],
+            buttonValue: 'Заказать расчёт'
+        }
+    }
+
     return (
-        <Header
-            getLinks={() => links}
-            getDataOfButton={() => btn}
-            getPricingInformation={() => pricingInfo}
-            getHotlineTelephoneNumber={() => hotline}
-            isNavbarOpen={isNavbarOpen}
-            toggleNavbar={toggleNavbar}/>
+        <>
+            <Header
+                getLinks={() => links}
+                getDataOfButton={() => btn}
+                getPricingInformation={() => pricingInfo}
+                getHotlineTelephoneNumber={() => hotline}
+                isNavbarOpen={isNavbarOpen}
+                toggleNavbar={toggleNavbar}/>
+            <DeliveryCalculator {...deliveryCalculator} />
+        </>
     );
 }
