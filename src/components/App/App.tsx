@@ -75,9 +75,9 @@ export const App = () => {
 
     const advantages: IAdvantageProps[] = [
         {
-            imgSrc: './images/advatages/customs-clearance-of-cargo.svg',
+            imgSrc: '/images/advantages/customs-clearance-of-cargo.svg',
             imgAlt: 'иконка растаможки груза',
-            heading: 'растаможка грузка',
+            heading: 'Растаможка грузка',
             description: 'Мы берём на себя все формальности и бумажную волокиту, связанную с растаможкой груза'
         }
     ];
