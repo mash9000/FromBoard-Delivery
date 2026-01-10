@@ -1,13 +1,15 @@
-import {Header} from "./Header/Header.tsx";
-import type {LinkModel} from "./Link/model/LinkModel.ts";
-import type {ButtonModel} from "./Button/model/ButtonModel.ts";
+import {Header} from "../Header/Header.tsx";
+import type {LinkModel} from "../Link/model/LinkModel.ts";
+import type {ButtonModel} from "../Button/model/ButtonModel.ts";
 import {useState} from "react";
 import {
     DeliveryCalculator
-} from "./DeliveryCalculator/DeliveryCalculator.tsx";
+} from "../DeliveryCalculator/DeliveryCalculator.tsx";
 import type {
     IDeliveryCalculatorProps
-} from "./DeliveryCalculator/model/IDeliveryCalculatorProps.ts";
+} from "../DeliveryCalculator/model/IDeliveryCalculatorProps.ts";
+import {Advantage} from "../Advantage/Advantage.tsx";
+import type {IAdvantageProps} from "../Advantage/model/IAdvantageProps.ts";
 
 export const App = () => {
     const links: LinkModel[] = [
@@ -61,7 +63,7 @@ export const App = () => {
             placeholders: ['Имя',
                 'Почта',
                 'Телефон',
-                'Общая площадь, м2',
+                'Общая площадь, м²',
                 'Вес, кг',
                 'Страна покупки',
                 'Город покупки',
@@ -70,6 +72,15 @@ export const App = () => {
             buttonValue: 'Заказать расчёт'
         }
     }
+
+    const advantages: IAdvantageProps[] = [
+        {
+            imgSrc: './images/advatages/customs-clearance-of-cargo.svg',
+            imgAlt: 'иконка растаможки груза',
+            heading: 'растаможка грузка',
+            description: 'Мы берём на себя все формальности и бумажную волокиту, связанную с растаможкой груза'
+        }
+    ];
 
     return (
         <>
@@ -81,6 +92,10 @@ export const App = () => {
                 isNavbarOpen={isNavbarOpen}
                 toggleNavbar={toggleNavbar}/>
             <DeliveryCalculator {...deliveryCalculator} />
+            <div className='advantage-block'>
+                {advantages.map((advantage: IAdvantageProps) =>
+                    <Advantage {...advantage} />)}
+            </div>
         </>
     );
 }
