@@ -5,6 +5,8 @@
   top: 264px;
   left: calc(50% - calc(1536px / 2));
 
+  z-index: 0;
+
   display: grid;
   column-gap: 24px;
   row-gap: 14px;
@@ -38,5 +40,17 @@
     584px;
     column-gap: 16px;
     margin-top: 48px;
+  }
+
+  @media screen and (max-width: 758px) {
+    width: 640px;
+    left: calc(50% - calc(640px / 2));
+    grid-template-columns:  320px                   320px;
+    grid-template-rows:
+    204px
+    350px
+    584px;
+    column-gap: 16px;
+    margin-top: -110px;
   }
 }

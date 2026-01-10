@@ -18,4 +18,9 @@
     height: 350px;
     grid-area: 2/1/2/3;
   }
+
+  @media screen and (max-width: 758px) {
+    width: 640px;
+    height: 350px;
+  }
 }
