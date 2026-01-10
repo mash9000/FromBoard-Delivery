@@ -1,0 +1,6 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.advantage__desc {
+  grid-area: desc;
+  @include tf.text-formatter('desc of adventage');
+}

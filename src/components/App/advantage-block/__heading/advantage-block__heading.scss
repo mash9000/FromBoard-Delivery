@@ -1,0 +1,5 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.advantage-block__heading {
+  @include tf.text-formatter('heading of adventage box');
+}

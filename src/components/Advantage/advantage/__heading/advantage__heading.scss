@@ -1,0 +1,6 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.advantage__heading {
+  grid-area: header;
+  @include tf.text-formatter('heading of adventage');
+}
