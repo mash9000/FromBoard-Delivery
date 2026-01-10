@@ -84,7 +84,21 @@
     line-height: 24px;
     color: map.get(colors.$colors, 'gray-900');
     text-align: center;
-  } @else {
+  } @else if ($component == 'heading of article') {
+    font: {
+      family: 'Formular Black';
+      size: 36px;
+    }
+    line-height: 40px;
+    color: map.get(colors.$colors, 'gray-900');
+  } @else if ($component == 'description of article') {
+    font: {
+      family: 'Formular Regular';
+      size: 20px;
+    }
+    line-height: 28px;
+    color: map.get(colors.$colors, 'gray-900');
+  }  @else {
     @error 'unknown component ("#{$component}")';
   }
 }

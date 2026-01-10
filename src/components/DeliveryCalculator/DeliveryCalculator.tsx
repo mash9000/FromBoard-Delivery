@@ -13,6 +13,9 @@ import './delivery-calculator/__input-field/_city-of-purchase/delivery-calculato
 import './delivery-calculator/__input-field/_delivery-area/delivery-calculator__input-field--delivery-area.scss';
 import './delivery-calculator/__input-field/_delivery-city/delivery-calculator__input-field--delivery-city.scss';
 import './delivery-calculator/__send-button/delivery-calculator__send-button.scss';
+import './delivery-calculator/__article/delivery-calculator__article.scss';
+import './delivery-calculator/__heading-of-article/delivery-calculator__heading-of-article.scss';
+import './delivery-calculator/__description-of-article/delivery-calculator__description-of-article.scss';
 
 import {StringInput} from "../Inputs/StringInput.tsx";
 import {EmailInput} from "../Inputs/EmailInput.tsx";
@@ -30,8 +33,8 @@ export const DeliveryCalculator = ({
     return (
         <div className='delivery-calculator'>
             <article className="delivery-calculator__article">
-                <h2 className="delivery-calculator__heading-of-artice">{articleData.getHeading()}</h2>
-                <p className='delivery-calculator__description-of-artice'>{articleData.getDescription()}</p>
+                <h2 className="delivery-calculator__heading-of-article">{articleData.getHeading()}</h2>
+                <p className='delivery-calculator__description-of-article'>{articleData.getDescription()}</p>
             </article>
             <img className='delivery-calculator__image'
                  alt={articleData.getImageDescription()}

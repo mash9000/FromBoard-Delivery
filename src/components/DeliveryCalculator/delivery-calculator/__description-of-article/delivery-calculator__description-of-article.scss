@@ -1,0 +1,5 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.delivery-calculator__description-of-article {
+  @include tf.text-formatter('description of article');
+}
