@@ -1,1 +1,7 @@
-.quality-guarantees__inner-box {}
+.quality-guarantees__inner-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  width: 1536px;
+  margin-bottom: 36px;
+}

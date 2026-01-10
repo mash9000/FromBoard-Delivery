@@ -119,6 +119,34 @@
     }
     line-height: 36px;
     color: map.get(colors.$colors, 'gray-900');
+  } @else if ($component == 'heading of quality guarantees') {
+    font: {
+      family: 'Formular Black';
+      size: 30px;
+    }
+    line-height: 36px;
+    color: map.get(colors.$colors, 'gray-900');
+  } @else if ($component == 'desc of quality guarantees') {
+    font: {
+      family: 'Formular Regular';
+      size: 16px;
+    }
+    line-height: 24px;
+    color: map.get(colors.$colors, 'gray-900');
+    display: inline-block;
+    width: 756px;
+    text-align: center;
+  } @else if ($component == 'title of certificate') {
+    font: {
+      family: 'Formular Black';
+      size: 18px;
+    }
+    line-height: 28px;
+    color: map.get(colors.$colors, 'gray-900');
+    display: inline-block;
+    width: 366px;
+    text-align: center;
+    margin-top: 4px;
   } @else {
     @error 'unknown component ("#{$component}")';
   }

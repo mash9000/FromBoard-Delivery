@@ -1,0 +1,5 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.certificate__title {
+  @include tf.text-formatter('title of certificate');
+}

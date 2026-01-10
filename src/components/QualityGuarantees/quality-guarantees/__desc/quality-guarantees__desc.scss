@@ -1,0 +1,6 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.quality-guarantees__desc {
+  @include tf.text-formatter('desc of quality guarantees');
+  margin-bottom: 24px;
+}
