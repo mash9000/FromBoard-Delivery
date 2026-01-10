@@ -14,6 +14,10 @@ import type {
 } from "../DeliveryCalculator/model/IDeliveryCalculatorProps.ts";
 import {Advantage} from "../Advantage/Advantage.tsx";
 import type {IAdvantageProps} from "../Advantage/model/IAdvantageProps.ts";
+import {QualityGuarantees} from "../QualityGuarantees/QualityGuarantees.tsx";
+import type {
+    QualityGuaranteesProps
+} from "../QualityGuarantees/model/QualityGuaranteesProps.ts";
 
 export const App = () => {
     const links: LinkModel[] = [
@@ -116,6 +120,33 @@ export const App = () => {
         },
     ];
 
+    const qualityGuarantess: QualityGuaranteesProps = {
+        heading: 'Гарантии качества',
+        description: 'Наши гарантии качества включают в себя полный спектр документов, необходимых для ввоза и вывоза товаров, а также для успешного бизнеса на мировом рынке. Мы предоставляем вам надёжность и уверенность',
+        certificates: [
+            {
+                imgSrc: '',
+                imgAlt: '',
+                title: 'Свидетельство о регистрации в РФ'
+            },
+            {
+                imgSrc: '',
+                imgAlt: '',
+                title: 'Свидетельство о регистрации в США'
+            },
+            {
+                imgSrc: '',
+                imgAlt: '',
+                title: 'Свидетельство о регистрации в Китае'
+            },
+            {
+                imgSrc: '',
+                imgAlt: '',
+                title: 'Свидетельство о регистрации в Великобритнии'
+            },
+        ]
+    }
+
     return (
         <>
             <Header
@@ -133,6 +164,7 @@ export const App = () => {
                         <Advantage key={advantage.heading} {...advantage} />)}
                 </div>
             </div>
+            <QualityGuarantees {...qualityGuarantess} />
         </>
     );
 }
