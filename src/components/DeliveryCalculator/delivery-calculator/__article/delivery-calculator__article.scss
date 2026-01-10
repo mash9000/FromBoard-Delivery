@@ -1,3 +1,10 @@
 .delivery-calculator__article {
   height: 216px;
 }
+
+@media screen and (max-width: 1024px) {
+  .delivery-calculator__article {
+    width: inherit;
+    grid-area: 1/1/2/2;
+  }
+}

@@ -27,4 +27,16 @@
     584px;
     column-gap: 16px;
   }
+
+  @media screen and (max-width: 1024px) {
+    width: 768px;
+    left: calc(50% - calc(768px / 2));
+    grid-template-columns:  384px                   384px;
+    grid-template-rows:
+    168px
+    350px
+    584px;
+    column-gap: 16px;
+    margin-top: 48px;
+  }
 }
