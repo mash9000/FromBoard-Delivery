@@ -1,4 +1,5 @@
 export type ButtonModel = {
     value: string,
-    nameOfIcon?: string | false
+    nameOfIcon?: string | false,
+    styles?: string
 }

@@ -1,3 +1,21 @@
 .delivery-calculator {
+  width: 1536px;
+  height: 584px;
+  position: relative;
+  top: 264px;
+  left: calc(50% - calc(1536px / 2));
 
+  display: grid;
+  column-gap: 24px;
+  row-gap: 14px;
+  grid-template-areas:    'heading                form'
+                          'desc                   form'
+                          'image                  form';
+  grid-template-columns:  756px                   756px;
+  grid-template-rows:
+    120px
+    84px
+    352px;
+
+  outline: 2px dashed red;
 }

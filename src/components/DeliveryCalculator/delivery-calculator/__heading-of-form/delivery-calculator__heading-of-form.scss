@@ -1,0 +1,8 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.delivery-calculator__heading-of-form {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+
+  @include tf.text-formatter('heading of form');
+}

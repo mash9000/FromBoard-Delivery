@@ -1,0 +1,11 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.delivery-calculator__description-of-form {
+  display: inline-block;
+  width: 358px;
+
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+
+  @include tf.text-formatter('description of form');
+}

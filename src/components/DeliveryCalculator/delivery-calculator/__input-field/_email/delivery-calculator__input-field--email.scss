@@ -1,0 +1,9 @@
+.delivery-calculator__input-field--email {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  width: 100%;
+}
+
+.input__box:has(.delivery-calculator__input-field--email) {
+  width: 100%;
+}

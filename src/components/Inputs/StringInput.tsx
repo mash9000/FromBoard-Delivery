@@ -7,7 +7,7 @@ import type {PropsOfInputs} from "./model/interfaces/PropsOfInputs.ts";
 import {IconControllerForInputs} from "./model/IconControllerForInputs.ts";
 import type {CSSProperties} from "react";
 
-export const StringInput = ({placeholder, textHint, icon}: PropsOfInputs) => {
+export const StringInput = ({placeholder, textHint, icon, styles}: PropsOfInputs) => {
     const cssPropertiesObject = new IconControllerForInputs();
     let cssProperties: CSSProperties = {'padding': '12px'} as CSSProperties;
     if (icon)
@@ -16,7 +16,7 @@ export const StringInput = ({placeholder, textHint, icon}: PropsOfInputs) => {
     return (
         <div className='input__box'>
             <input
-                className='input input--focus'
+                className={`input input--focus ${styles}`}
                 style={cssProperties}
                 type='text'
                 placeholder={placeholder}

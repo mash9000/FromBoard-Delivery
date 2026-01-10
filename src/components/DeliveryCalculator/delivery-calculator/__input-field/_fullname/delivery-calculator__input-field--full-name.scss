@@ -1,0 +1,11 @@
+.input__box:has(.delivery-calculator__input-field--full-name) {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  justify-self: stretch;
+  width: 100%;
+}
+
+.input__box:has(.delivery-calculator__input-field--full-name) .delivery-calculator__input-field--full-name {
+  width: 100% !important;
+  max-width: 100%;
+}

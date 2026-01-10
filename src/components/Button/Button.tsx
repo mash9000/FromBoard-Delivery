@@ -5,11 +5,11 @@ import './button/_disabled/button--disabled.scss';
 import './button/_with-icon/button--with-icon.scss';
 import type {ButtonModel} from "./model/ButtonModel.ts";
 
-export const Button = ({value, nameOfIcon}: ButtonModel) => {
+export const Button = ({value, nameOfIcon, styles}: ButtonModel) => {
     const pathToTheFolderWithIconsForButtons: string = '/images/buttons/';
     return (
         <button type='button'
-                className={`button button--hover button--active button--disable ${nameOfIcon ? 'button--with-icon' : ''}`}
+                className={`button button--hover button--active button--disable ${nameOfIcon ? 'button--with-icon' : ''} ${styles}`}
                 style={nameOfIcon ? {['--icon-url' as any]: `url(${pathToTheFolderWithIconsForButtons}${nameOfIcon})`} : undefined}>{value}</button>
     );
 }

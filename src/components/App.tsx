@@ -1,13 +1,13 @@
-import {Header} from "./components/Header/Header.tsx";
-import type {LinkModel} from "./components/Link/model/LinkModel.ts";
-import type {ButtonModel} from "./components/Button/model/ButtonModel.ts";
+import {Header} from "./Header/Header.tsx";
+import type {LinkModel} from "./Link/model/LinkModel.ts";
+import type {ButtonModel} from "./Button/model/ButtonModel.ts";
 import {useState} from "react";
 import {
     DeliveryCalculator
-} from "./components/DeliveryCalculator/DeliveryCalculator.tsx";
+} from "./DeliveryCalculator/DeliveryCalculator.tsx";
 import type {
     IDeliveryCalculatorProps
-} from "./components/DeliveryCalculator/model/IDeliveryCalculatorProps.ts";
+} from "./DeliveryCalculator/model/IDeliveryCalculatorProps.ts";
 
 export const App = () => {
     const links: LinkModel[] = [
