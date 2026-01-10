@@ -1,4 +1,11 @@
 .delivery-calculator__input-field--delivery-city {
   grid-column: 2 / 3;
   grid-row: 7 / 8;
+  width: 236px !important;
+}
+
+@media screen and (max-width: 1536px) {
+  .delivery-calculator__input-field--delivery-city {
+    width: 291px !important;
+  }
 }

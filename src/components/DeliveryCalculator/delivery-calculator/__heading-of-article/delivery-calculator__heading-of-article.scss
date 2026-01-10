@@ -2,4 +2,9 @@
 
 .delivery-calculator__heading-of-article {
   @include tf.text-formatter('heading of article');
+
+  @media screen and (max-width: 1536px) {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }

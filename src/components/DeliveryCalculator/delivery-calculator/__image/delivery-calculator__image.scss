@@ -6,4 +6,10 @@
   transform: scaleX(-1);
 
   grid-area: image;
+
+  @media screen and (max-width: 1536px) {
+    width: 505px;
+    height: 232px;
+    grid-area: 1/2/1/3;
+  }
 }

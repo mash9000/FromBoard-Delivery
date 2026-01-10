@@ -2,4 +2,10 @@
 
 .delivery-calculator__description-of-article {
   @include tf.text-formatter('description of article');
+
+  @media screen and (max-width: 1536px) {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 12px;
+  }
 }

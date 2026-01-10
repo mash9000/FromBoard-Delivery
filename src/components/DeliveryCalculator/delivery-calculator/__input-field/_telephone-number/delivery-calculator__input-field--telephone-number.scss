@@ -1,4 +1,11 @@
 .delivery-calculator__input-field--telephone-number {
   grid-column: 2 / 3;
   grid-row: 4 / 5;
+  width: 236px !important;
+}
+
+@media screen and (max-width: 1536px) {
+  .delivery-calculator__input-field--telephone-number {
+    width: 291px !important;
+  }
 }

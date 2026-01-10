@@ -3,7 +3,7 @@
 @use './hint-mixins';
 
 .input {
-  width: 258px;
+  width: inherit;
   height: 48px;
   box-sizing: border-box;
   outline: none;

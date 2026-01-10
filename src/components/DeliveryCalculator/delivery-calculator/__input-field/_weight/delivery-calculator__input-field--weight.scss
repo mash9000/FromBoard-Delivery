@@ -1,4 +1,11 @@
 .delivery-calculator__input-field--weight {
   grid-column: 2 / 3;
   grid-row: 5 / 6;
+  width: 236px !important;
+}
+
+@media screen and (max-width: 1536px) {
+  .delivery-calculator__input-field--weight {
+    width: 291px !important;
+  }
 }

@@ -1,4 +1,11 @@
 .delivery-calculator__input-field--total-area {
   grid-column: 1 / 2;
   grid-row: 5 / 6;
+  width: 236px !important;
+}
+
+@media screen and (max-width: 1536px) {
+  .delivery-calculator__input-field--total-area {
+    width: 291px !important;
+  }
 }

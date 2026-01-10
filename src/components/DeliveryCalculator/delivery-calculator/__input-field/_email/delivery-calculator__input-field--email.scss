@@ -1,9 +1,11 @@
 .delivery-calculator__input-field--email {
   grid-column: 1 / 2;
   grid-row: 4 / 5;
-  width: 100%;
+  width: 236px !important;
 }
 
-.input__box:has(.delivery-calculator__input-field--email) {
-  width: 100%;
+@media screen and (max-width: 1536px) {
+  .delivery-calculator__input-field--email {
+    width: 291px !important;
+  }
 }

@@ -16,4 +16,15 @@
     120px
     84px
     352px;
+  
+  @media screen and (max-width: 1536px) {
+    width: 1026px;
+    left: calc(50% - calc(1026px / 2));
+    grid-template-columns:  505px                   505px;
+    grid-template-rows:
+    108px
+    112px
+    584px;
+    column-gap: 16px;
+  }
 }

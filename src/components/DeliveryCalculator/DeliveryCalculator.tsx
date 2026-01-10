@@ -3,7 +3,7 @@ import './delivery-calculator/__image/delivery-calculator__image.scss';
 import './delivery-calculator/__form/delivery-calculator__form.scss';
 import './delivery-calculator/__heading-of-form/delivery-calculator__heading-of-form.scss';
 import './delivery-calculator/__description-of-form/delivery-calculator__description-of-form.scss';
-import './delivery-calculator/__input-field/_fullname/delivery-calculator__input-field--full-name.scss';
+import './delivery-calculator/__input-field/_full-name/delivery-calculator__input-field--full-name.scss';
 import './delivery-calculator/__input-field/_email/delivery-calculator__input-field--email.scss';
 import './delivery-calculator/__input-field/_telephone-number/delivery-calculator__input-field--telephone-number.scss';
 import './delivery-calculator/__input-field/_total-area/delivery-calculator__input-field--total-area.scss';
