@@ -98,7 +98,28 @@
     }
     line-height: 28px;
     color: map.get(colors.$colors, 'gray-900');
-  }  @else {
+  } @else if ($component == 'heading of adventage') {
+    font: {
+      family: 'Formular Black';
+      size: 24px;
+    }
+    line-height: 32px;
+    color: #000;
+  } @else if ($component == 'desc of adventage') {
+    font: {
+      family: 'Formular Regular';
+      size: 14px;
+    }
+    line-height: 20px;
+    color: #000;
+  } @else if ($component == 'heading of adventage box') {
+    font: {
+      family: 'Formular Black';
+      size: 30px;
+    }
+    line-height: 36px;
+    color: map.get(colors.$colors, 'gray-900');
+  } @else {
     @error 'unknown component ("#{$component}")';
   }
 }

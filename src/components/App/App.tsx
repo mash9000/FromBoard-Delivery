@@ -1,3 +1,7 @@
+import './advantage-block/advantage-block.scss';
+import './advantage-block/_inner-block/advantage-block--inner-block.scss';
+import './advantage-block/__heading/advantage-block__heading.scss';
+
 import {Header} from "../Header/Header.tsx";
 import type {LinkModel} from "../Link/model/LinkModel.ts";
 import type {ButtonModel} from "../Button/model/ButtonModel.ts";
@@ -79,7 +83,37 @@ export const App = () => {
             imgAlt: 'иконка растаможки груза',
             heading: 'Растаможка грузка',
             description: 'Мы берём на себя все формальности и бумажную волокиту, связанную с растаможкой груза'
-        }
+        },
+        {
+            imgSrc: '/images/advantages/secure-packaging.svg',
+            imgAlt: 'иконка надёжной упаковки',
+            heading: 'Надёжная упаковка',
+            description: 'Все товары упаковываются нашими специалистами с особым вниманием к деталям, гарантируя, что они дойдут в безопасности и в отличном состоянии'
+        },
+        {
+            imgSrc: '/images/advantages/quickly-and-profitably.svg',
+            imgAlt: 'иконка скорости и выгоды',
+            heading: 'Быстро и выгодно',
+            description: 'Мы предлагаем быструю и выгодную доставку, чтобы вы могли насладиться покупками как можно скорее.'
+        },
+        {
+            imgSrc: '/images/advantages/convenient-service.svg',
+            imgAlt: 'иконка удобства сервиса',
+            heading: 'Удобный сервис',
+            description: 'Стремимся сделать процесс доставки максимально удобным для вас, чтобы опыт остался приятным и беззаботным'
+        },
+        {
+            imgSrc: '/images/advantages/transparency-of-work.svg',
+            imgAlt: 'иконка прозрачности работы',
+            heading: 'Прозрачность работы',
+            description: 'Мы предоставляем полный контроль над каждым этапом доставки, от момента заказа до момента прибытия заказа'
+        },
+        {
+            imgSrc: '/images/advantages/cargo-insurance.svg',
+            imgAlt: 'иконка старховки груза',
+            heading: 'Страхование груза',
+            description: 'Наше страхование обеспечивает полную защиту и покрытие почти все неприятные и неожиданные ситуации'
+        },
     ];
 
     return (
@@ -93,8 +127,11 @@ export const App = () => {
                 toggleNavbar={toggleNavbar}/>
             <DeliveryCalculator {...deliveryCalculator} />
             <div className='advantage-block'>
-                {advantages.map((advantage: IAdvantageProps) =>
-                    <Advantage {...advantage} />)}
+                <h3 className='advantage-block__heading'>Наши преимущества</h3>
+                <div className='advantage-block_inner-block'>
+                    {advantages.map((advantage: IAdvantageProps) =>
+                        <Advantage key={advantage.heading} {...advantage} />)}
+                </div>
             </div>
         </>
     );
