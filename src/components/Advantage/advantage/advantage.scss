@@ -12,4 +12,15 @@
                           60px;
   row-gap: 12px;
   column-gap: 12px;
+
+  @media screen and (max-width: 1024px){
+    width: 372px;
+    height: 120px;
+
+    grid-template-columns:  108.8px      251px;
+    grid-template-rows:
+                          28px
+                          80px;
+    padding: 0;
+  }
 }

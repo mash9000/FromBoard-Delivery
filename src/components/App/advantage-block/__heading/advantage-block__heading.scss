@@ -2,4 +2,8 @@
 
 .advantage-block__heading {
   @include tf.text-formatter('heading of adventage box');
+
+  @media screen and (max-width: 758px){
+    margin-bottom: 24px;
+  }
 }

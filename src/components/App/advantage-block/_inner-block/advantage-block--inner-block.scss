@@ -5,4 +5,18 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 1536px){
+    height: 600px;
+  }
+
+  @media screen and (max-width: 1024px){
+    height: 428px;
+  }
+
+  @media screen and (max-width: 758px){
+    width: 372px;
+    height: 860px;
+    row-gap: 24px;
+  }
 }

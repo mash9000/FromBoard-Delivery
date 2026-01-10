@@ -3,4 +3,9 @@
 .advantage__heading {
   grid-area: header;
   @include tf.text-formatter('heading of adventage');
+
+  @media screen and (max-width: 1024px){
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
