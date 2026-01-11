@@ -1,0 +1,23 @@
+.carousel-of-review__inner-box {
+  display: grid;
+  grid-template-areas:      '.              heading       .'
+                            'button-prev    carousel      button-next';
+  grid-template-columns:    107px            1276px        107px;
+  grid-template-rows:       36px
+                            350px;
+  row-gap: 32px;
+  align-items: center;
+  justify-items: center;
+
+  @media screen and (max-width: 1536px) {
+    grid-template-columns:    107px            826px        107px;
+    grid-template-rows:       36px
+                              346px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns:    107px            570px        107px;
+    grid-template-rows:       36px
+                              346px;
+  }
+}

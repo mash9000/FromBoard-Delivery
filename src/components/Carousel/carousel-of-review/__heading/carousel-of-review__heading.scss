@@ -1,0 +1,6 @@
+@use '../../../../styles/text-formatter' as tf;
+
+.carousel-of-review__heading {
+  grid-area: heading;
+  @include tf.text-formatter('heading of block reviews');
+}

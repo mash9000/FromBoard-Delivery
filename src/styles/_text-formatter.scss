@@ -147,6 +147,27 @@
     width: 366px;
     text-align: center;
     margin-top: 4px;
+  } @else if ($component == 'heading of review') {
+    font: {
+      family: 'Formular Bold';
+      size: 24px;
+    }
+    line-height: 32px;
+    color: map.get(colors.$colors, 'gray-900');
+  } @else if ($component == 'author of review') {
+    font: {
+      family: 'Formular Light';
+      size: 24px;
+    }
+    line-height: 32px;
+    color: map.get(colors.$colors, 'gray-500');
+  } @else if ($component == 'heading of block reviews') {
+    font: {
+      family: 'Formular Black';
+      size: 30px;
+    }
+    line-height: 36px;
+    color: map.get(colors.$colors, 'gray-900');
   } @else {
     @error 'unknown component ("#{$component}")';
   }

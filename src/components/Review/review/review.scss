@@ -11,8 +11,26 @@
   background-position: 533px 235px;
   border-radius: 16px;
   box-sizing: border-box;
-  padding: 32px 16px;
+  padding: 32px 43px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1536px) {
+    width: 396px;
+    height: 276px;
+    padding: 16px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 570px;
+    height: 224px;
+    padding: 32px 15px;
+  }
+
+  @media screen and (max-width: 758px) {
+    width: 442px;
+    height: 280px;
+    padding: 32px 16px;
+  }
 }

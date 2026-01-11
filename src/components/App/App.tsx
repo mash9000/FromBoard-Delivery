@@ -18,6 +18,9 @@ import {QualityGuarantees} from "../QualityGuarantees/QualityGuarantees.tsx";
 import type {
     QualityGuaranteesProps
 } from "../QualityGuarantees/model/QualityGuaranteesProps.ts";
+import type {ReviewProps} from "../Review/model/ReviewProps.ts";
+import {CarouselOfReview} from "../Carousel/CarouselOfReview.tsx";
+import {useWindowWidth} from "./model/TrackScreenWidth.ts";
 
 export const App = () => {
     const links: LinkModel[] = [
@@ -147,6 +150,27 @@ export const App = () => {
         ]
     }
 
+    const reviews: ReviewProps[] = [
+        {
+            getParagraph: () => 'Я уже несколько лет заказываю дизайнерскую одежду из Франции через ваш сервис, и он никогда меня не подводил. Важно иметь надежную компанию, которая позаботится о вашем заказе и предоставит все необходимые документы для ввоза в Россию',
+            getAuthor: () => 'Ольга'
+        },
+        {
+            getParagraph: () => 'Заказал шикарные часы из Швейцарии, и доставка была невероятно быстрой. Ваш сервис делает интернет-шоппинг более доступным и удобным',
+            getAuthor: () => 'Игорь'
+        },
+        {
+            getParagraph: () => 'Ваш сервис действительно изменил мой способ покупок. Я больше не переживаю о таможенных вопросах и документах - все у вас в порядке. Спасибо за ваше качество и надежность',
+            getAuthor: () => 'Екатерина'
+        },
+        {
+            getParagraph: () => 'Я заказал редкий антикварный предмет из Японии через ваш сервис, и остался впечатлен. Все пришло в отличном состоянии, и ваша гарантия качества действительно работает. Спасибо за ваше профессиональное обслуживание',
+            getAuthor: () => 'Дмитрий'
+        }
+    ]
+
+    const width = useWindowWidth();
+
     return (
         <>
             <Header
@@ -165,6 +189,7 @@ export const App = () => {
                 </div>
             </div>
             <QualityGuarantees {...qualityGuarantess} />
+            {reviews.length > 0 && <CarouselOfReview reviews={reviews} limitOnDisplayingReviewCards={width <= 1024 ? 1 : 2}/>}
         </>
     );
 }

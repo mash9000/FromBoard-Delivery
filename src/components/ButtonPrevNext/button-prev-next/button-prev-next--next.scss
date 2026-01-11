@@ -1,0 +1,8 @@
+.button-prev-next--next {
+  transform: scaleX(-1);
+  grid-area: button-next;
+  
+  @media screen and (max-width: 758px) {
+    left: -100px;
+  }
+}

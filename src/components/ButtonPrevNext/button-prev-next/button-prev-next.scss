@@ -1,0 +1,13 @@
+.button-prev-next {
+  border: none;
+  outline: none;
+  width: 60px;
+  height: 60px;
+  background: url(/images/button-prev-next.svg) no-repeat center center;
+  background-size: 60px;
+  
+  @media screen and (max-width: 1536px) {
+    position: relative;
+    top: -35px;
+  }
+}

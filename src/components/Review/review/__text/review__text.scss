@@ -1,3 +1,10 @@
-.review__text {
+@use '../../../../styles/text-formatter' as tf;
 
+.review__text {
+  @include tf.text-formatter('heading of review');
+
+  @media screen and (max-width: 1536px) {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
