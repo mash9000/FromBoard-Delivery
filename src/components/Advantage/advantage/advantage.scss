@@ -23,4 +23,8 @@
                           80px;
     padding: 0;
   }
+
+  @media screen and (max-width: 758px) {
+    height: 140px;
+  }
 }
