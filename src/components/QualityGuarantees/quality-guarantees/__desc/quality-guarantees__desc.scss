@@ -3,4 +3,8 @@
 .quality-guarantees__desc {
   @include tf.text-formatter('desc of quality guarantees');
   margin-bottom: 24px;
+
+  @media screen and (max-width: 758px) {
+    width: 640px;
+  }
 }
